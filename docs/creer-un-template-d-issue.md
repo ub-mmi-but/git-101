@@ -14,14 +14,12 @@ Les templates **(modèles)** d'issue sont des modèles pré-définis pour la cr�
 
 Pour la création d'un template veuillez suivre les étapes suivantes sur github :
 
-- Cliquez sur l'onglet "Issues"  de votre repo
+- Cliquez sur l'onglet "Settings"  de votre repo
 
-- En haut à droite de la liste des issues, cliquez sur "New issue".
+- Scrollez jusqu'a la partie "Features"
 
-- Dans la zone de saisie du problème, vous verrez un lien "Get started" (Commencer) à côté de "Use a template". Cliquez sur ce lien.
+- Cliquez sur le bouton bleu contenant "Set up templates" dans le sous onglet issue, puis selectionner "Custom template"
 
-- Vous serez dirigé vers une page où vous pouvez sélectionner un modèle existant ou créer un nouveau modèle personnalisé. Selectionner la deuxième options.
-
-- Donnez un nom à votre modèle et définissez la structure en utilisant des balises Markdown. Vous pouvez ajouter des champs de texte, des listes déroulantes, des cases à cocher, etc., pour collecter les informations nécessaires.
+- Puis personnaliser votre modèle.
 
 - Enregistrez le modèle. Une fois enregistré, il sera disponible pour être utilisé lors de la création de nouvelles issues dans ce dépôt.
