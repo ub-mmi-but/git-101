@@ -1,7 +1,3 @@
-
-ecris moi un fichier .md avec les principales commandes git avec chaque fois une explication et un exemple de la commande
-voici le debut de mon code : 
-
 # Commandes GIT - Base
 
 
@@ -17,12 +13,74 @@ C'est la commande qu'on utilise juste après l'installation de GIT, comme son no
 
 ## 2. **git init**
 
-Comme son nom l'indique, cette commande permet d'initialiser un nouveau dépot Git et donc de permettre par la suite d'utiliser les commandes git dans votre répertoire. En effet avant git init, la plupart des commandes git ne sont pas accessibles.
+Comme son nom l'indique, cette commande permet **d'initialiser un nouveau dépot Git et donc de permettre par la suite d'utiliser les commandes git dans votre répertoire. En effet avant git init, la plupart des commandes git ne sont pas accessibles.
 
 ```bash
  git init
 ```
 
+> En créant une app React ou en faisant un par exemple, le git init est fait automatiquement
+
+## 3. **git clone**
+
+
+## 4. **git status**
+
+
+## 5. **git add**
+
+
+## 6. **git commit**
+
+
+## 7. **git push**
+
+
+## 8. **git branch**
+
+
+## 9. **git checkout**
+
+
+## 10. **git remote**
+
+
+## 11. **git fetch**
+
+
+## 12. **git pull**
+
+
+## 13. **git stash**
+
+
+## 14. **git log**
+
+
+## 15. **git shortlog**
+
+
+## 16. **git show**
+
+
+## 17. **git rm**
+
+
+## 18. **git merge**
+
+
+
+
+
+## 19. **git diff**
+
+
+## 20. **git rebase**
+
+
+
+
+<!-- ![Alt text](image.png) -->
 
 
 
@@ -31,6 +89,3 @@ Comme son nom l'indique, cette commande permet d'initialiser un nouveau dépot G
 
 
 
-
->Ceci est une autre **zone de retrait**.Cette zone continue également dans la ligne suivante.
-Cependan, cette ligne n’est plus en retrait
