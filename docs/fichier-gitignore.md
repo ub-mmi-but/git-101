@@ -32,7 +32,9 @@ node_modules
 
 \# Ignorer les fichiers de configuration SASS
 
+```txt
 .sass-cache
+```
 
 # Pour en savoir plus 
 https://git-scm.com/docs/gitignore
