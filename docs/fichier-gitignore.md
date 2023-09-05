@@ -6,23 +6,23 @@ Pour créer un fichier .gitignore local, créez un fichier texte et nommez-le .g
 
 Les entrées dans ce fichier peuvent aussi suivre un modèle de correspondance (matching pattern).
 
--* est utilisé comme un caractère de remplacement de correspondance (wildcard match)
--/ est utilisé pour ignorer les chemins d'accès relatifs au fichier .gitignore
--# est utilisé pour ajouter des commentaires à un fichier .gitignore
+\* est utilisé comme un caractère de remplacement de correspondance (wildcard match)
+/ est utilisé pour ignorer les chemins d'accès relatifs au fichier .gitignore
+\# est utilisé pour ajouter des commentaires à un fichier .gitignore
 
-Voici un exemple de ce à quoi le fichier .gitignore pourrait ressembler :
+## Voici un exemple de ce à quoi le fichier .gitignore pourrait ressembler :
 
 \# Ignorer les fichiers systèmes Mac
 .DS_store
 
-# Ignorer le répertoire node_modules
+\# Ignorer le répertoire node_modules
 node_modules
 
-# Ignorer tous les fichiers texte
+\# Ignorer tous les fichiers texte
 *.txt
 
-# Ignorer les fichiers liés aux clés d'API
+\# Ignorer les fichiers liés aux clés d'API
 .env
 
-# Ignorer les fichiers de configuration SASS
+\# Ignorer les fichiers de configuration SASS
 .sass-cache
