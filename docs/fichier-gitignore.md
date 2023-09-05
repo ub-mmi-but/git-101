@@ -16,19 +16,27 @@ Les entrées dans ce fichier peuvent aussi suivre un modèle de correspondance (
 
 \# Ignorer les fichiers systèmes Mac
 
+```txt
 .DS_store
+```
 
 \# Ignorer le répertoire node_modules
 
+```txt
 node_modules
+```
 
 \# Ignorer tous les fichiers texte
 
+```txt
 *.txt
+```
 
 \# Ignorer les fichiers liés aux clés d'API
 
+```txt
 .env
+```
 
 \# Ignorer les fichiers de configuration SASS
 
