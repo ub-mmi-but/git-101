@@ -1,6 +1,6 @@
 # Clone
 
-``git clone``  permet de **créer une copie locale** d'un **dépôt distant (repository)** sur votre propre appareil. Elle télécharge tous les fichiers et l'historique de version du dépôt distant permettant un travail avec les fichiers localement. Cela facilite la collaboration et le suivi des modifications dans un projet Git.
+``git clone``  permet de **créer une copie locale** d'un **dépôt distant (repository)** sur votre propre appareil. Elle télécharge tous les fichiers et l'historique de version du dépôt distant permettant un travail avec les fichiers localement. Cela facilite la collaboration et le suivi des modifications dans un projet git.
 
 Voici la syntaxe de la commande :
 ```git
