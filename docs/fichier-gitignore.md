@@ -32,13 +32,13 @@ node_modules
 *.txt
 ```
 
-\# Ignorer les fichiers liés aux clés d'API
+*** Ignorer les fichiers liés aux clés d'API ***
 
 ```txt
 .env
 ```
 
-\# Ignorer les fichiers de configuration SASS
+*** Ignorer les fichiers de configuration SASS ***
 
 ```txt
 .sass-cache
