@@ -45,4 +45,5 @@ node_modules
 ```
 
 # Pour en savoir plus 
-https://git-scm.com/docs/gitignore
+
+[Voir la documentation sur git-scm.com](https://git-scm.com/docs/gitignore)
