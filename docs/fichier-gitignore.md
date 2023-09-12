@@ -44,6 +44,16 @@ node_modules
 .sass-cache
 ```
 
-# Pour en savoir plus 
+## Configuration globale
+
+Pour ignorer les fichiers systèmes, qui sont différents pour tout le monde, préférez utiliser la configuration globale afin de ne pas avoir à les déclarer dans le `.gitignore` de tous vos projets.
+
+```bash
+echo .DS_Store >> ~/.gitignore_global
+```
+
+Le `.gitignore_global` s'applique sur votre machine à tous les répertoires Git.
+
+## Pour en savoir plus 
 
 [Voir la documentation sur git-scm.com](https://git-scm.com/docs/gitignore)
