@@ -96,7 +96,7 @@ git remote
 
 ## `git fetch`
 
-La commande git fetch permet de récupérer les dernières modifications depuis un dépôt distant sans les fusionner avec votre branche locale. Elle met à jour les références distantes et les branches distantes correspondantes sans modifier votre travail local.
+La commande `git fetch` permet de **récupérer les dernières modifications depuis un dépôt distant _sans les fusionner_ avec votre branche locale**. Elle met à jour les références distantes et les branches distantes correspondantes sans modifier votre travail local.
 
 ```shell
 git fetch <dépôt distant>
@@ -104,7 +104,7 @@ git fetch <dépôt distant>
 
 ## `git pull`
 
-La commande git pull récupère les modifications depuis un dépôt distant et fusionne les modifications avec votre branche locale. Elle équivaut à exécuter git fetch suivi de git merge pour fusionner les modifications.
+La commande `git pull` **récupère les modifications depuis un dépôt distant et _fusionne les modifications_ avec votre branche locale**. Elle équivaut à exécuter `git fetch` suivi de `git merge` pour fusionner les modifications.
 
 ```shell
 git pull <dépôt distant> <branche distante>
@@ -112,7 +112,7 @@ git pull <dépôt distant> <branche distante>
 
 ## `git stash`
 
-La commande git stash permet de mettre de côté les modifications non validées dans une pile temporaire. Cela vous permet de basculer entre les branches ou de récupérer des modifications ultérieurement.
+La commande `git stash` permet de **mettre de côté les modifications non validées dans une pile temporaire**. Cela vous permet de basculer entre les branches ou de récupérer des modifications ultérieurement.
 
 ```shell
 git statsh
@@ -120,7 +120,7 @@ git statsh
 
 ## `git log`
 
-La commande git log affiche l'historique des commits effectués dans votre projet. Elle affiche les informations telles que l'auteur du commit, la date, l'heure et le message du commit.
+La commande `git log` **affiche l'historique des commits** effectués dans votre projet. Elle affiche les informations telles que l'auteur du commit, la date, l'heure et le message du commit.
 
 ```shell
 git log
@@ -128,7 +128,7 @@ git log
 
 ## `git shortlog`
 
-La commande git shortlog affiche un résumé des commits effectués par chaque auteur du projet. Elle regroupe les commits par auteur et affiche le nombre de commits effectués par chaque auteur.
+La commande `git shortlog` **affiche un résumé des commits** effectués par chaque auteur du projet. Elle regroupe les commits par auteur et affiche le nombre de commits effectués par chaque auteur.
 
 ```shell
 git shortlog
@@ -136,7 +136,7 @@ git shortlog
 
 ## `git show`
 
-La commande git show affiche les modifications apportées lors d'un commit spécifique. Elle affiche les informations sur le commit ainsi que les différences de code entre le commit et son parent.
+La commande `git show` **affiche les modifications apportées lors d'un commit spécifique**. Elle affiche les informations sur le commit ainsi que les différences de code entre le commit et son parent.
 
 ```shell
 git show <hash_commit>
@@ -144,7 +144,7 @@ git show <hash_commit>
 
 ## `git rm`
 
-La commande git show affiche les modifications apportées lors d'un commit spécifique. Elle affiche les informations sur le commit ainsi que les différences de code entre le commit et son parent.
+La commande `git rm` permet de **supprimer un fichier** de votre projet Git. Elle supprime le fichier de la zone de staging et du répertoire de travail.
 
 ```shell
 git rm <nom_fichier>
@@ -152,18 +152,15 @@ git rm <nom_fichier>
 
 ## `git merge`
 
-La commande git merge permet de fusionner une branche avec la branche actuelle. Elle combine les modifications des deux branches en créant un nouveau commit de fusion.
+La commande `git merge` permet de **fusionner une branche avec la branche actuelle**. Elle combine les modifications des deux branches en créant un nouveau commit de fusion.
 
 ```shell
 git merge <branche>
 ```
 
-
-
-
 ## `git diff`
 
-La commande git diff affiche les différences entre deux commits, entre une branche et un commit, ou entre deux branches. Elle affiche les lignes de code ajoutées, modifiées ou supprimées.
+La commande `git diff` **affiche les différences** entre _deux commits_, entre _une branche et un commit_, ou _entre deux branches_. Elle affiche les lignes de code ajoutées, modifiées ou supprimées.
 
 ```shell
 git diff <commit1> <commit2>
@@ -173,7 +170,7 @@ git diff <branche1> <branche2>
 
 ## `git rebase`
 
-La commande git rebase permet de rejouer les commits d'une branche sur une autre branche. Elle réapplique les commits de la branche sur le dessus de la branche cible.
+La commande `git rebase` permet de **rejouer les commits d'une branche sur une autre branche**. Elle réapplique les commits de la branche sur le dessus de la branche cible.
 
 ```shell
 git rebase <branche_cible> 
