@@ -16,11 +16,13 @@ Pour pousser (**push**) votre branche vers votre remote repository vous devrez e
 git push origin <nom-branche>
 ```
 
+!!! Warning "Attention"
 
-***Attention :*** **dans le cas ou vous devez mettre une branche qui n'existe pas encore dans le projet vous devrez utiliser cette commande :**
-```git
-git push -u origin <nom-branche>
-```
+    Dans le cas ou vous devez mettre une branche qui n'existe pas encore dans le projet vous devrez utiliser cette commande :
+
+    ```git
+    git push -u origin <nom-branche>
+    ```
 
 ## Pull
 Si des modifications on été faites sur le projet hors de votre appareil il vous faudra faire un **pull** :
