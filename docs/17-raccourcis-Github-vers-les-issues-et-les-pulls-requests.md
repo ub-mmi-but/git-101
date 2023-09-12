@@ -8,6 +8,11 @@ Voici des raccourcis utile sur Github en utilisant le clavier :
 - Pour ouvrir la palette de commandes GitHub, il est possible de faire ```Ctrl+K```
 - Si vous modifiez du texte Markdown, ouvrez la palette de commandes avec ```Ctrl+Alt+K```
 - Pour ouvrir la barre de recherhce, il est possible de faire ```S``` ou ```/```
+  Sur une issue, il est possible d'appuyer sur  : 
+-  ```L``` pour ajouter des étiquettes
+-  ```A``` pour ajouter des gens à l'issue
+-  ```X``` pour lier une branche à l'issue
+
 - Pour fermer une issue lors d'une pull request, il est possible d'ajouter dans la description l'un des mots suivants suivie du numéro de l'issue : 
 
 ```
