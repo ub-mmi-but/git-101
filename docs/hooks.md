@@ -21,3 +21,6 @@ Les hooks `post-` sont souvent utilisés en tant que notification.
 Modifier le message des commits avec le hook `prepare-commit-msg.sample`
 Editer le fichier et supprimer le `.sample`
 
+### Les diffférents hooks :
+
+Voici une liste des hooks existant avec leur utilité sur git : https://git-scm.com/docs/githooks
