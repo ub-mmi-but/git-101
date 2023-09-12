@@ -94,3 +94,5 @@ Pour explorer les détails d'un volume spécifique, sélectionnez un volume dans
 La suppression d'un volume supprime le volume et toutes ses données.
 
 Pour supprimer un volume, passez la souris sur le volume, puis sélectionnez l' icône **Supprimer**. Vous pouvez également sélectionner le volume dans la liste, puis sélectionner le bouton **Supprimer**.
+
+Plus d'informations sur : <https://docs.docker.com>
