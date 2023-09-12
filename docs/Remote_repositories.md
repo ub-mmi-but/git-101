@@ -1,7 +1,7 @@
 
 # Les remote repositories
 
-**Git remote** est une référence à un **dépôt distant**, plus précisément un emplacement où votre projet git est **enregistré a distance**. Cela permet une **collaboration** et une **synchronisation** entre **plusieurs développeurs** sur un même projet.
+**Git remote** est une référence à un **dépôt distant**, plus précisément un emplacement où votre projet git est **enregistré à distance**. Cela permet une **collaboration** et une **synchronisation** entre **plusieurs développeurs** sur un même projet.
 
 Ils peuvent **cloner** le code pour le **modifier en local**, **récupérer les modifications** faites dans le dépôt distant fait après le clonage local. Et pour finir se **synchroniser** avec les autres en poussant les modifications faites en local dans le dépôt distant.
 
