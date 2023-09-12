@@ -18,8 +18,14 @@ Les hooks `post-` sont souvent utilisés en tant que notification.
 
 ### Exemple :
 
-Modifier le message des commits avec le hook `prepare-commit-msg.sample`
-Editer le fichier et supprimer le `.sample`
+Modifier le message des commits :
+    - Utiliser le hook `prepare-commit-msg.sample`
+    - Editer le fichier et supprimer le `.sample`
+
+Empecher les erreurs de syntaxe lors d'un commit : 
+    - Utiliser le hook `pre-commit.sample`
+    - Editer le fichier et supprimer le `.sample`
+    - Suivre les étapes de ce guide, en prenant en compte le langage que vous voulez utiliser : https://www.codeheroes.fr/2021/10/11/git-lutilisation-des-hooks-avec-husky/
 
 ### Les diffférents hooks :
 
