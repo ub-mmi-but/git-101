@@ -1,7 +1,7 @@
-# A quoi sert le fichier `.gitignore` ?
+# À quoi sert le fichier `.gitignore` ?
 `.gitignore` est un fichier texte permettant lors des commit d'ignorer les fichiers et répertoires mentionner dans celui-ci.
 
-# Comment creer son fichier `.gitignore` ?
+# Comment créer  son fichier `.gitignore` ?
 Pour créer un fichier `.gitignore` local, créez un fichier texte et nommez-le `.gitignore` . Chaque nouvelle ligne devrait lister un fichier additionnel ou un répertoire que vous voulez que Git ignore.
 
 Les entrées dans ce fichier peuvent aussi suivre un modèle de correspondance (matching pattern).
