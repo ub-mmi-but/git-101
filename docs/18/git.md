@@ -1,107 +1,19 @@
-# Commande de base de GIT
+# Introduction à GIT
 
-Cette documentation couvre les commandes Git les plus couramment utilisées pour travailler avec des dépôts GitHub.
+![Logo de Git](https://logowik.com/content/uploads/images/git6963.jpg "Logo de Git")
 
-## Création et Clonage de Dépôts
+Git est un système de gestion de versions qui révolutionne la collaboration et le suivi des modifications dans le développement de logiciels. Il permet aux équipes de travailler de manière efficace, de suivre l'évolution de leur code source et de gérer les différentes versions d'un projet. Git offre un moyen puissant de contrôler les modifications apportées à un ensemble de fichiers, de les documenter et de les partager avec d'autres collaborateurs. Que vous soyez un développeur de logiciels, un écrivain, un designer ou tout simplement quelqu'un qui souhaite garder une trace de ses créations, Git peut vous aider à organiser, suivre et collaborer sur vos projets de manière transparente.
 
-1) Initialiser un nouveau dépôt local :
+## Gestion de projet collaboratif
 
-```bash
-git init
-```
+Git est largement utilisé dans l'industrie du développement logiciel pour gérer le code source de projets de toutes tailles, du petit script personnel aux vastes applications d'entreprise. L'un de ses avantages majeurs réside dans sa capacité à permettre à plusieurs personnes de travailler simultanément sur un même projet sans conflits majeurs. Grâce à la gestion de branches, chaque collaborateur peut travailler sur une version différente du code sans perturber le travail des autres. Une fois les modifications terminées, Git facilite la fusion (ou le "merge") de ces branches pour créer une version cohérente et complète du projet.
 
-2) Cloner un dépôt distant :
+## Versioning et traçabilité du projet
 
-```bash
-git clone <URL_du_dépôt>
-```
+De plus, Git offre un historique détaillé de toutes les modifications apportées au code, ce qui permet de remonter dans le temps pour identifier les problèmes, suivre l'évolution d'une fonctionnalité ou revenir à une version antérieure du projet si nécessaire.
 
-## Travailler avec des Modifications
+## Ecosystème et partage de code
 
-### Ajout d'une modification de la branche au dêpot distant
+Git permet de facilement partager le code du projet que ce soit en local ou sur un ordinateur, en réseau local ou à distance grâce à des services d'hébergement de code tels que [GitHub](https://github.com), [GitLab](https://about.gitlab.com) et [Bitbucket](https://bitbucket.org). Ces plateformes permettent de partager facilement le code, de collaborer avec d'autres développeurs, de suivre les problèmes et de gérer les demandes de fusion (pull requests).
 
-1) Ajouter des fichiers
-
-    - Ajouter des fichiers à l'index :
-
-        ```bash
-        git add <nom_fichier>
-        ```
-
-    - Ajouter tous les fichiers modifiés à l'index :
-
-        ```bash
-        git add .
-        ```
-
-2) Valider les modifications :
-
-    ```bash
-    git commit -m "Message de commit"
-    ```
-
-3) Pousser sur la branche distante
-
-    ```bash
-    git push
-    ```
-
-### Visionner les modifications
-
-- Afficher l'état des modifications :
-
-    ```bash
-    git status
-    ```
-
-- Afficher les différences entre les fichiers :
-
-    ```bash
-    git diff
-    ```
-
-## Branches
-
-- Créer une nouvelle branche :
-
-    ```bash
-    git branch <nom_branche>
-    ```
-
-- Changer de branche (création automatique si elle n'existe pas) :
-
-    ```bash
-    git checkout <nom_branche>
-    ```
-
-- Fusionner une branche dans la branche actuelle :
-
-    ```bash
-    git merge <nom_branche>
-    ```
-
-## Collaboration
-
-- Récupérer les modifications depuis le dépôt distant :
-
-    ```bash
-    git pull
-    ```
-
-- Attribuer à l'origine l'url du dépôt :
-
-    ```bash
-    git remote add origin <URL_du_dépôt>
-    ```
-
-- Pousser les modifications vers le dépôt distant :
-
-    ```bash
-    git push origin <nom_branche>
-    ```
-
- - Afficher les commits récents :
-
-    ```bash
-    git log
-    ```
+[Voir l'introduction de Github](./github.md)
