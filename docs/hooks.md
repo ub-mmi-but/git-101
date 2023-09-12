@@ -27,6 +27,6 @@ Empecher les erreurs de syntaxe lors d'un commit :
     - Editer le fichier et supprimer le `.sample`
     - Suivre les étapes de ce guide, en prenant en compte le langage que vous voulez utiliser : https://www.codeheroes.fr/2021/10/11/git-lutilisation-des-hooks-avec-husky/
 
-### Les diffférents hooks :
+### Un lien utile :
 
 Voici une liste des hooks existant avec leur utilité sur git : https://git-scm.com/docs/githooks
