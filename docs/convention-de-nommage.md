@@ -8,7 +8,7 @@ Veillez donc à bien nommer vos branches, commits et issues :).
 
 ## Branche
 
-Pour le nommage de vos Branche, voici la structure utilisée : 
+Pour le nommage de vos Branches, voici la structure utilisée : 
 
 - XX-[nom-branche]
 
@@ -26,7 +26,7 @@ Par exemple, pour de Docker :
 
 - Préférez "Docker - Fonctionnement et utilisation".
 
-Conseille : 
+Conseil : 
 
 Utilisez des mots-clefs, basez vous sur ce qui existe déjà dans le projet.
 
