@@ -29,12 +29,14 @@ Permet enregistrer les manipulations qu’on souhaite commiter
 
 ```shell
 git add ...
+git add ...
 git stage
 ```
 Pour enregistrer une suppression 
 
 ```shell
 git rm ... 
+git rm ...  
 ```
 
 Pour retirer des éléments ajoutés au stage
@@ -70,6 +72,17 @@ git restore --staged
 
 
 ## Qu'est ce que le HEAD ?
+
+On considère le plus souvent HEAD comme un pointeur sur le dernier commit de la branche courante. C'est généralement le cas, mais pas tout le temps.
+
+HEAD est bien un pointeur, une référence vers un emplacement donné de notre historique (un commit si tu préfères). Il a deux fonctions 
+principales :
+
+nous repérer dans notre historique;
+définir l'endroit depuis lequel nous produisons un commit.
+
+Elle permet de nous indiquer quelle est la branche active, définissant ainsi l'état de notre espace de travail, le commit qui servira de parent à notre prochain commit et la branche qui devra bouger.
+
 
 
 
