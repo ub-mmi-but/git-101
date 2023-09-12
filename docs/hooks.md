@@ -25,8 +25,8 @@ Modifier le message des commits :
 Empecher les erreurs de syntaxe lors d'un commit : 
     - Utiliser le hook `pre-commit.sample`
     - Editer le fichier et supprimer le `.sample`
-    - Suivre les étapes de ce guide, en prenant en compte le langage que vous voulez utiliser : https://www.codeheroes.fr/2021/10/11/git-lutilisation-des-hooks-avec-husky/
+    - Suivre les étapes de ce guide, en prenant en compte le langage que vous voulez utiliser : [Voir le lien](https://www.codeheroes.fr/2021/10/11/git-lutilisation-des-hooks-avec-husky/)
 
 ### Un lien utile :
 
-Voici une liste des hooks existant avec leur utilité sur git : https://git-scm.com/docs/githooks
+Voici une liste des hooks existant avec leur utilité sur git : [Voir le lien](https://git-scm.com/docs/githooks)
