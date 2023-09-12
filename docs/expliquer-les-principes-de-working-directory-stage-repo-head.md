@@ -1,12 +1,12 @@
 # Qu'est ce que la Working Directory ?
 
-C’est la première zone qu’on utilise, notre copie de travail. Dès qu’on a initialisé Git sur un projet, tout travail versionné (ajouts, suppressions, modifications) a lieu dans cette zone.
+C’est la première zone qu’on utilise, notre copie de travail. Dès qu’on a initialisé Git sur un projet, tout travail versionné (ajouts, suppressions, modifications) a lieu dans cette zone. Simplement c'est ca zone de travail sur son ordinateur. 
 
 
 
-### Comment ca marche ?
+### En résumé?
 
-
+En résumé, le working directory est la copie locale de votre projet GitHub où vous effectuez vos modifications avant de les enregistrer sous forme de commits et de les pousser vers le référentiel GitHub distant pour partager vos modifications avec d'autres collaborateurs.
 
 
 
@@ -28,13 +28,13 @@ On retrouve donc des commandes à cet effet :
 Permet enregistrer les manipulations qu’on souhaite commiter
 
 ```shell
-git add … 
+git add ...
 git stage
 ```
 Pour enregistrer une suppression 
 
 ```shell
-git rm ... … 
+git rm ... 
 ```
 
 Pour retirer des éléments ajoutés au stage
