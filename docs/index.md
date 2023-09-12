@@ -2,7 +2,9 @@
 
 ![Logo de Git](https://logowik.com/content/uploads/images/git6963.jpg "Logo de Git")
 
-Git est un système de gestion de versions qui révolutionne la collaboration et le suivi des modifications dans le développement de logiciels. Il permet aux équipes de travailler de manière efficace, de suivre l'évolution de leur code source et de gérer les différentes versions d'un projet. Git offre un moyen puissant de contrôler les modifications apportées à un ensemble de fichiers, de les documenter et de les partager avec d'autres collaborateurs. Que vous soyez un développeur de logiciels, un écrivain, un designer ou tout simplement quelqu'un qui souhaite garder une trace de ses créations, Git peut vous aider à organiser, suivre et collaborer sur vos projets de manière transparente.
+Git est un système de gestion de versions qui révolutionne la collaboration et le suivi des modifications dans le développement de logiciels. Il permet aux équipes de travailler de manière efficace, de suivre l'évolution de leur code source et de gérer les différentes versions d'un projet.
+
+Git offre un moyen puissant de contrôler les modifications apportées à un ensemble de fichiers, de les documenter et de les partager avec d'autres collaborateurs. Que vous soyez un développeur de logiciels, un écrivain, un designer ou tout simplement quelqu'un qui souhaite garder une trace de ses créations, Git peut vous aider à organiser, suivre et collaborer sur vos projets de manière transparente.
 
 ## Gestion de projet collaboratif
 
