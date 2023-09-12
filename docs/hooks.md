@@ -16,7 +16,7 @@ Les hooks `post-` sont souvent utilisés en tant que notification.
 
 **Vous l'aurez compris les hooks `pre-` s'exécutent avant et les hooks `post-` après une opération.**
 
-Exemple :
+## Exemple :
 
 Modifier le message des commits avec le hook `prepare-commit-msg.sample`
 Editer le fichier et supprimer le `.sample`
