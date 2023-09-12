@@ -55,5 +55,42 @@ Si votre compte administrateur est différent de votre compte utilisateur, vous 
 $ net localgroup docker-users <user> /add
 ```
 
+## **Fonctionnement**
 
+### Images Docker
 
+Les images Docker sont des modèles d'applications contenant tous les éléments nécessaires à leur exécution, tels que le code source, les dépendances, les bibliothèques, etc. Ces images sont stockées dans un registre Docker (comme Docker Hub).
+
+### Conteneurs Docker
+
+Les conteneurs Docker sont des instances en cours d'exécution des images Docker. Ils sont légers, isolés les uns des autres et partagent le noyau du système d'exploitation sous-jacent.
+
+### Volumes Docker
+
+La vue Volumes dans Docker Dashboard vous permet de créer et de supprimer facilement des volumes et de voir lesquels sont utilisés. Vous pouvez également voir quel conteneur utilise un volume spécifique et explorer les fichiers et dossiers de vos volumes.
+
+**Gérez vos volumes**
+
+Utilisez le champ Rechercher pour rechercher un volume spécifique.
+
+Vous pouvez trier les volumes par :
+
+ - Nom
+ - Date créée
+ - Taille
+
+Dans le menu Plus d'options à droite de la barre de recherche, vous pouvez choisir les informations de volume à afficher.
+
+**Inspecter un volume**
+
+Pour explorer les détails d'un volume spécifique, sélectionnez un volume dans la liste. Cela ouvre la vue détaillée.
+
+- L' onglet En cours d'utilisation affiche le nom du conteneur à l'aide du volume, le nom de l'image, le numéro de port utilisé par le conteneur et la cible. Une cible est un chemin à l'intérieur d'un conteneur qui donne accès aux fichiers du volume.
+
+- L' onglet Données affiche les fichiers et dossiers dans le volume et la taille du fichier. Pour enregistrer un fichier ou un dossier, survolez le fichier ou le dossier et sélectionnez dans le menu Plus d'options.
+
+**Supprimer un volume**
+
+La suppression d'un volume supprime le volume et toutes ses données.
+
+Pour supprimer un volume, passez la souris sur le volume, puis sélectionnez l' icône **Supprimer**. Vous pouvez également sélectionner le volume dans la liste, puis sélectionner le bouton **Supprimer**.
