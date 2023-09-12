@@ -1,12 +1,12 @@
 # La commande `git stash`
 
-git stash met temporairement de coté les modifications que vous avez apportées à votre copie de travail afin que vous puissiez travailler sur autre chose, puis revenir et les réappliquer plus tard.
+`git stash` met temporairement de coté les modifications que vous avez apportées à votre copie de travail afin que vous puissiez travailler sur autre chose, puis revenir et les réappliquer plus tard.
 
 Le stockage est pratique si vous avez besoin de changer rapidement de contexte et de travailler sur autre chose, mais que vous êtes à mi-chemin d'un changement de code et que vous n'êtes pas tout à fait prêt à vous engager.
 
 ## Mettre de coté votre travail
 
-La git stash commande prend vos modifications non validées (qui ne sont pas commit), les enregistre pour une utilisation ultérieure, puis les annule à partir de votre copie de travail.
+La commande `git stash` prend vos modifications non validées (qui ne sont pas commit), les enregistre pour une utilisation ultérieure, puis les annule à partir de votre copie de travail.
 
 Par exemple:
 
@@ -30,7 +30,7 @@ On branch main
 nothing to commit, working tree clean
 ```
 
-Ici git stash vient de sauvegarder les modification dans dans le "stash" de votre référentiel Git, les "stash" ne sont pas transférées sur le dépot distant.
+Ici `git stash` vient de sauvegarder les modification dans dans le "stash" de votre référentiel Git, les "stash" ne sont pas transférées sur le dépot distant.
 
 À ce stade, vous êtes libre d'apporter des modifications, de créer de nouveaux commits, de changer de branche et d'effectuer toute autre opération Git ; puis revenez et réappliquez votre code en cache lorsque vous êtes prêt.
 
