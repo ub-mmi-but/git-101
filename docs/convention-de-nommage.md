@@ -1,13 +1,34 @@
 # Convention de nommage
-Dorian Engelvin (c'est moi)
+
+## À quoi ça sert ? 
+
+Appliquer une convention de nommage est très important pour permettre à tous de comprendre facilement la disposition des fichiers, notamment lorsqu'un collaborateur rejoint le projet en cours de route.
+
+Veillez donc à bien nommer vos branches, commits et issues :). 
 
 ## Branche
 
 Pour le nommage de vos Branche, voici la structure utilisée : 
 
-- XX-[nom-suite]
+- XX-[nom-branche]
 
-Voilà
+Par exemple, pour la branche n°14 : 
+
+14-Nom-de-la-branche
+
+## Issue
+
+Pour les issues, le plus intéressant est de permettre aux utilisateurs de n'avoir besoin que de lire les 2 ou 3 premiers mots pour s'orienter. 
+
+Par exemple, pour de Docker : 
+
+- Évitez "Le fonctionnement et l'utilisation de Docker".
+
+- Préférez "Docker - Fonctionnement et utilisation".
+
+Conseille : 
+
+Utilisez des mots-clefs, basez vous sur ce qui existe déjà dans le projet.
 
 ## Commit
 
@@ -19,5 +40,4 @@ Votre message de commit peut rester relativement libre dans l'information que vo
 
 Ajoutez une des informations entre [ ] selon la nature des modifications.
 
-Pour avoir quelque chose comme ça : "V2 05/09/2023 Nouvelle doc"
 ## Bravo
