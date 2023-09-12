@@ -11,7 +11,7 @@ Docker est une technologie qui facilite la mise en place, le déploiement et la 
 
 ### Installer sous Windows
 
-Il y a deux manière d'installer Docker :
+Il y a deux manières d'installer Docker :
 
 * De manière graphique
 
@@ -21,7 +21,7 @@ Il y a deux manière d'installer Docker :
 
 1. Double-cliquez sur Docker Desktop Installer.exe pour exécuter le programme d’installation.
 
-2. Assurez-vous que l' option Utiliser WSL 2 au lieu d'Hyper-V sur la page de configuration est sélectionnée ou non en fonction de votre choix de backend.
+2. Assurez-vous que l'option Utiliser WSL 2 au lieu d'Hyper-V sur la page de configuration est sélectionnée ou non en fonction de votre choix de backend.
 
 3. Suivez les instructions de l'assistant d'installation pour autoriser le programme d'installation et poursuivre l'installation.
 
@@ -54,7 +54,6 @@ Si votre compte administrateur est différent de votre compte utilisateur, vous 
 ```shell
 $ net localgroup docker-users <user> /add
 ```
-
 
 
 
