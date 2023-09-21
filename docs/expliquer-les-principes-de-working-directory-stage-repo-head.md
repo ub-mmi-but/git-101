@@ -15,10 +15,6 @@ C’est la première zone qu’on utilise, notre copie de travail. Dès qu’on 
 En résumé, le working directory est la copie locale de votre projet GitHub où vous effectuez vos modifications avant de les enregistrer sous forme de commits et de les pousser vers le référentiel GitHub distant pour partager vos modifications avec d'autres collaborateurs.
 
 
-
-
-
-
 ## Qu'est ce que le Stage ?
 
  Le stage est une zone dédiée à la préparation des commits : le stage. On peut la voir comme une zone tampon dans laquelle on va lister les modifications qu’on souhaite mettre dans notre prochain commit (ajouts, suppressions, tout ou partie des modifications).
