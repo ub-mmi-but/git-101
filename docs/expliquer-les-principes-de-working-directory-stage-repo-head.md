@@ -12,7 +12,7 @@ C’est la première zone qu’on utilise, notre copie de travail. Dès qu’on 
 
 ### En résumé ?
 
-En résumé, le working directory est la copie locale de votre projet GitHub où vous effectuez vos modifications avant de les enregistrer sous forme de commits et de les pousser vers le référentiel GitHub distant pour partager vos modifications avec d'autres collaborateurs.
+En résumé, le working directory est la copie de certains fichiers de votre projet GitHub où vous effectuez vos modifications avant de les enregistrer sous forme de commits et de les pousser vers le référentiel GitHub distant pour partager vos modifications avec d'autres collaborateurs.
 
 
 ## Qu'est ce que le Stage ?
@@ -50,12 +50,13 @@ git restore --staged
 
 ## Qu'est ce que le Repo ?
 
-Le terme "Repo" est une abréviation courante de "repository" en anglais, ce qui signifie en français "dépôt" ou "dépôt de code". Dans le contexte de Git, un repo (ou dépôt) Git est un emplacement où Git stocke l'historique des versions et les fichiers source d'un projet. C'est un élément central de Git, car il permet de suivre l'évolution du code source, de collaborer avec d'autres développeurs, de gérer les branches de développement, et bien plus encore. On retrouve tout ces éléments dans le dossier `.git`.
-
+Le repo est la copie du projet github, un repo (ou dépôt) Git est un emplacement où Git stocke l'historique des versions et les fichiers source d'un projet.
+On retrouve tout ces éléments dans le dossier `.git`.
+Le terme "Repo" est une abréviation courante de "repository" en anglais, ce qui signifie en français "dépôt" ou "dépôt de code".  C'est un élément central de Git, car il permet de suivre l'évolution du code source, de collaborer avec d'autres développeurs, de gérer les branches de développement, et bien plus encore. 
 
 ### Comment ca marche ?
 
-Comment ajouter des éléments de votre zone de transit (stage) à votre référentiel local (repo) ? La commande git git commit prend toutes les modifications dans la zone de transit (stage), les regroupe et les place dans votre referentiel local (repo). Un commit est simplement un point de contrôle indiquant à git de suivre tous les changements survenus jusqu'à présent en utilisant notre dernier commit comme comparaison. Après la validation, votre zone de transit sera vide.
+Comment ajouter des éléments de votre zone de transit (stage) à votre référentiel local (repo) ? La commande git `git commit` prend toutes les modifications dans la zone de transit (stage), les regroupe et les place dans votre referentiel local (repo). Un commit est simplement un point de contrôle indiquant à git de suivre tous les changements survenus jusqu'à présent en utilisant notre dernier commit comme comparaison. Après la validation, votre zone de transit sera vide.
 
 Comment pouvez-vous voir ce qui se trouve dans votre référentiel local (repo) ? Il existe quelques commandes que vous pouvez exécuter pour afficher différentes choses.
 
