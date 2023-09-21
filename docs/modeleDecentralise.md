@@ -7,16 +7,13 @@ Il existe deux modèles, le centralisé et le décentralisé.
 
 ## Avantages et inconvénients du modèle 
 
-Avantages : 
-    - Plus rapide 
-    - Plus de back-up
+| Avantages | Inconvénients |
+| --------- | --------- | --------- |
+| Plus rapide  | Plus complexe | 
+| Plus de back-up | Portage windows si retours à la ligne différents | 
 
-Inconvénients : 
-    - Plus complexe
-    - Portage windows si retours à la ligne différents
-`
 ## .git 
 
-`.git` est un répertoire utiliser par git, il contient toutes les informations nécessaire a git pour suivre les données relatives au projet
+`.git` est un répertoire utiliser par git, il contient toutes les informations nécessaire à  git pour suivre les données relatives au projet
 
 
