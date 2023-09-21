@@ -3,6 +3,7 @@
 Il existe deux modèles, le centralisé et le décentralisé.
 
 - Centralisé : Centralisation du code source du projet, les utilisateurs doivent se connecter au serveur pour travailler dessus. Exemple : SVN
+![Schema SVN](svn-workflow-1.png "Schema SVN")
 
 - Décentraliser : Le code source est hébergé sur un serveur distant, les utilisateurs sont cette fois invité à télécharger les fichiers pour pouvoir travailler de leurs cotés. Exemple : GitHub
 
@@ -18,6 +19,6 @@ Il existe deux modèles, le centralisé et le décentralisé.
 
 ## .git 
 
-`.git` est un répertoire utiliser par git, il contient toutes les informations nécessaire à git pour suivre les données relatives au projet.
+`.git` est un répertoire utiliser par git, il contient toutes les informations nécessaire à git pour suivre les données relatives au projet.    
 
 
