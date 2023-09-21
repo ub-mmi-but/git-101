@@ -41,4 +41,7 @@ Dans cette situation on va devoir :
 git commit --amend -m 'Nouveau message'
 ```
 
-⚠️ un amendement réécrit votre commit. Si vous essayez de push, vous aurez un message d'erreur car votre branche est désynchronisée de la branche distante. Utilisez `git push -f` pour forcer.
+
+!!! warning "Un amendement réécrit votre commit"
+
+    Si vous essayez de push, vous aurez un message d'erreur car votre branche est désynchronisée de la branche distante. Utilisez `git push -f` pour forcer.

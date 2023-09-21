@@ -16,7 +16,9 @@ resolves
 resolved
 ```
 
-Par exemple : `closes #10`
+!!! example "Exemple"
+
+    `closes #10`
 
 ## Raccourcis Clavier
 

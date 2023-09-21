@@ -12,21 +12,30 @@ Cela aura pour conséquence d'insérer une ligne de ce genre : ``![Alt text](ima
 
 ### Le texte alternatif
 
-Il est possible de gérer le texte alternatif ``[Alt text]`` de l'image.  
-Pour plus d'informations à propos du [Texte alternatif](https://developer.mozilla.org/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#texte_alternatif).
+Il est possible de gérer le texte alternatif ``[Alt text]`` de l'image.
 
-__Ex : __``![Un éléphant porté par une mongolfière](elephant_mongolfiere.jpg)``
+!!! info  
+  
+    Pour plus d'informations à propos du [Texte alternatif](https://developer.mozilla.org/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#texte_alternatif).
 
-![Un éléphant porté par une mongolfière](assets/elephant_mongolfiere.jpg)
+!!! example "Exemple"
+
+    ``![Un éléphant porté par une mongolfière](elephant_mongolfiere.jpg)``
+
+    ![Un éléphant porté par une mongolfière](assets/elephant_mongolfiere.jpg)
 
 ### Le lien de l'image
 
 Il est possible d'utiliser des chemins absoluts/relatifs mais aussi hébergés sur le Web.  
-Pour plus d'informations à propos des [URL](https://developer.mozilla.org/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 
-__Ex : __``![Un éléphant porté par une mongolfière](https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg)``
+!!! info
+    Pour plus d'informations à propos des [URL](https://developer.mozilla.org/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 
-![Un éléphant porté par une mongolfière](https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg)
+!!! example "Exemple"
+
+    ``![Un éléphant porté par une mongolfière](https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg)``
+
+    ![Un éléphant porté par une mongolfière](https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg)
 
 ### Emplacement de l'image dans le dossier de travail
 
