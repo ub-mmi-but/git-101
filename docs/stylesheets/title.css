@@ -1,3 +1,10 @@
-h1{
-    color: red;
+:root {
+    --md-primary-fg-color:        #50246b;
+    --md-primary-fg-color--light: #8647ad;
+    --md-primary-fg-color--dark:  #41165c;
+    --md-default-fg-color--light: #50246b;
+}
+
+.md-typeset h1{
+    font-weight: bold;
 }
