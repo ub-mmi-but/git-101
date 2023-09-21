@@ -47,6 +47,11 @@ Pour retirer des éléments ajoutés au stage :
 git restore --staged 
 ```
 
+Pour voir la différence entre le working directory et le stage :
+```shell
+git diff
+```
+
 
 ## Qu'est ce que le Repo ?
 
@@ -106,3 +111,8 @@ ref: refs/heads/autre-branche
 ```
 
 Si on pousse un peu et qu’on crée un commit depuis cet emplacement, on verra que cette référence n’aura pas changé, HEAD pointera toujours sur autre-branche. C’est la valeur de cette étiquette de branche qui aura bougé (seulement parce qu’elle était désignée active par HEAD).
+
+ Cette commande est utilisée pour réinitialiser le Git Head au commit juste avant le précédent :
+```shell
+git reset HEAD~1
+```
