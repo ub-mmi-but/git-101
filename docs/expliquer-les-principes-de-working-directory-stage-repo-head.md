@@ -83,8 +83,6 @@ Elle permet de nous indiquer quelle est la branche active, définissant ainsi l'
 
 
 
-
-
 ### Comment ca marche ?
 
 HEAD est représenté par le fichier .git/HEAD. Si on regarde son contenu, on trouvera toujours une seule ligne dont le format sera le plus souvent celui-ci :
