@@ -1,4 +1,4 @@
-# Introduction
+# Working Directory, Stage, Repo, HEAD
 
 Pour comprendre pleinement la dynamique de Git, il est essentiel de saisir comment working directory, le stage, le repo et HEAD sont intrinsèquement liés. Imaginez-les comme les pièces interconnectées d'une machine puissante de gestion de versions.
 
@@ -6,7 +6,7 @@ Pour comprendre pleinement la dynamique de Git, il est essentiel de saisir comme
 
 ## Qu'est ce que la Working Directory ?
 
-C’est la première zone qu’on utilise, notre copie de travail. Dès qu’on a initialisé Git sur un projet, tout travail versionné (ajouts, suppressions, modifications) a lieu dans cette zone. Simplement c'est ca zone de travail sur son ordinateur. 
+C'est la première zone qu'on utilise, notre copie de travail. Dès qu’on a initialisé Git sur un projet, tout travail versionné (ajouts, suppressions, modifications) a lieu dans cette zone. Simplement c'est ca zone de travail sur son ordinateur. 
 
 
 
