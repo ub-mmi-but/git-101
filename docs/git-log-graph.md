@@ -4,11 +4,18 @@
 
 Lors de projet Git, la commande `git commit`, qui permet de créer des instantanés du projet et d'enregistrer les modifications du projet, est très souvent utilisé. Tous les `commit` sont enregistrer dans un historique qui peut vite devenir compliqué à explorer. C'est pourquoi il existe une commande `git log` qui permet d'afficher les commits, de les filtrer et même de rechercher une modification précise.
 
+Pour obtenir un rendu graphique des commits de la branche, utilisez la commande `git log --graph --oneline`.
+
+![Git log graph](assets/git-log-graph.png)
+
+Pour obtenir un rendu graphique de toutes les branches du projet, utilisez la commande `git log --graph --oneline --all`.
+
 ### Syntaxe de Git Log
 
 |`git log`|La commande par défaut liste tous les commits dans l’ordre inverse|
 |---|---|
-|`git log --graph --decorate --oneline`|Liste les modifications sous forme graphique (commande génial)|
+|`git log --graph --oneline`|Liste les modifications sous forme graphique de la branche|
+|`git log --graph --oneline --all`|Liste les modifications sous forme graphique de toutes les branches du repository|
 |`git log -p`|Affiche le contexte des modifications|
 |`git log --stat`|Affiche les statistiques de modifications avec une liste claire|
 |`git log --oneline`|Regroupe chaque commit sur une ligne pour un meilleur aperçu|
@@ -24,7 +31,7 @@ Pour plus de détails sur les commandes `git log`, lancez la commande `git log -
 
 ## Qu'est ce qu'un Git Graph ?
 
-Un Git Graph est une représentation/revisualisation des `Commits` et des évènements sur les différentes branches du projet.
+Un Git Graph est une représentation/revisualisation des **commits** et des évènements sur les différentes branches du projet.
 
 ![Git Graph](<assets/ex-git-graph.png>)
 
@@ -59,4 +66,10 @@ Pour GitLab, il faut aller dans l'onglet `</> Code` puis choisir `Repository gra
 
 ## Une extension VS Code
 
-Il existe pour VS Code une extension pêrmettant de prévisualiser les Git Graph directement sur le projet en local, `Git Graph`.
+Il existe pour VS Code une extension pêrmettant de prévisualiser les Git Graph directement sur le projet en local, **Git Graph**.
+
+![Extension VS Code](<assets/extension-vscode.png>)
+
+Une fois installer, il suffit de clicker sur le bouton `Git Graph` en bas de page.
+
+![Git Graph VS Code](assets/git-graph.png)
