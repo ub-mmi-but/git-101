@@ -6,7 +6,7 @@ La commande `git rebase` est utilisée pour réorganiser l'historique des commit
 
 Le rebasage _(`git rebase`)_ fonctionne en prenant une branche (_feature_) et en la basant sur une autre branche (généralement _main_). Cela signifie que les commits de la branche de _feature_ sont replacés sur le dessus de la branche _main_, un par un.
 
-![Alt text](assets/image-1.png)
+![Alt text](assets/rebase_img.png)
 
 ## Pourquoi l'utiliser
 
