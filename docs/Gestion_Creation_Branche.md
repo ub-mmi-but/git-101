@@ -1,6 +1,6 @@
 # Introduction  
 
-Git permet la création de branche afin de mieux répartir le travail et éviter les erreurs sur la version de production
+Git permet la création de branches afin de mieux répartir le travail et éviter les erreurs sur la version de production
 ## Créer des branches  
 Il existe plusieurs façons de créer une branche avec Git.  
 La plus commune étant d'utiliser la commande suivante :  
