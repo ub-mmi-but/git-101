@@ -10,19 +10,35 @@ L'idée principale du branching strategy est de diviser le travail entre plusieu
 
 
 La stratégie *git flow* sépare le travail en 5 branches :
+
 - **Main** pour les versions stables.
 - **Develop** pour le développement continue.
 - Feature, chaque fonctionnalité a implémenter a sa propre branche
 - Release pour verifier une nouvelle fonctionnalité avant sa publication
 - Hotfix pour les correctifs de bug
 
-Cette méthode permet un développement plus intuitif et simple d'oganisation.
+Cette méthode permet un développement plus intuitif et simple d'oganisation. On notera que sur le git remote il n'y a que les branches développement et main (les autres sont des branches temporaires)
 
 ## La stratégie *Gitlab flow*
 
-La méthode *GitLab flow* est très similaire a *git flow* avec l'exeption que :
-- Il n'y a pas de branche développement
-- Il n'y a pas de branche release
-- Il est courant de fusionner directement les branches de fonctionnalités dans la branche principale.
+![Gitlab flow](./assets/GitLab_flow.png)
+
+*Gitlab flow* est totalement différent, il contient les branches suivantes :
+
+- **Production**
+
+	Représente l'environnement stable où les versions approuvées sont déployées pour les utilisateurs finaux (reçoit des merges de *Pre-production* approuvées).
+
+- **Pre-production**
+
+	Sert à tester les bug et à les résoudre, puis quand tout est résolu et approuvé, la branche est mergé sur *Main* et *Production*.
+
+- **Main**
+
+	Reçoit les features et les fix fait dans la *Pre-production*.
+
+- **Feature**
+
+	Ajout de fonctionnalités, puis merge sur *Main*.
 
 *GitLab Flow* est plus flexible que le *git Flow*, ce qui le rend adapté à une variété de projets, tel que les projets plus petits et ceux qui nécessitent une approche plus légère de la gestion des branches.
