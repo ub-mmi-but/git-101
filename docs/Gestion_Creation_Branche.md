@@ -57,7 +57,7 @@ Vous pouvez rajouter -v pour voir les derniers commit sur chaque branches :
 git branch -v
 ```
 
-Si jamais vous voulez voir quels branches vous pouvez supprimer c'est à dire les brnaches qui ont été merged alors ajoutez --merged (--no-merged si vous voulez voir celles avec des travaux en cours).
+Si jamais vous voulez voir quels branches vous pouvez supprimer c'est à dire les branches qui ont été merged alors ajoutez --merged (--no-merged si vous voulez voir celles avec des travaux en cours).
 
 ```
 git branche --merged
