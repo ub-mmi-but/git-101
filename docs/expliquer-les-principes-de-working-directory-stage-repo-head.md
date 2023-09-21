@@ -6,13 +6,13 @@ Pour comprendre pleinement la dynamique de Git, il est essentiel de saisir comme
 
 ## Qu'est ce que la Working Directory ?
 
-C'est la première zone qu'on utilise, notre copie de travail. Dès qu’on a initialisé Git sur un projet, tout travail versionné (ajouts, suppressions, modifications) a lieu dans cette zone. Simplement c'est ca zone de travail sur son ordinateur. 
+C'est la première zone qu'on utilise, dossier de travail. Dès qu’on a initialisé Git sur un projet, tout travail versionné (ajouts, suppressions, modifications) a lieu dans cette zone. Simplement c'est ca zone de travail sur son ordinateur. 
 
 
 
 ### En résumé ?
 
-En résumé, le working directory est la copie de certains fichiers de votre projet GitHub où vous effectuez vos modifications avant de les enregistrer sous forme de commits et de les pousser vers le référentiel GitHub distant pour partager vos modifications avec d'autres collaborateurs.
+En résumé, le working directory est la copie des fichiers sur la branche active de votre projet  GitHub où vous effectuez vos modifications avant de les enregistrer sous forme de commits et de les pousser vers le référentiel GitHub distant pour partager vos modifications avec d'autres collaborateurs.
 
 
 ## Qu'est ce que le Stage ?
