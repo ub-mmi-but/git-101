@@ -12,7 +12,7 @@ Le stockage est pratique si vous avez besoin de changer rapidement de contexte e
 
 3) Vous ne pouvez pas pousser vos modifications inachevées de la branche "feature-branch" vers la branche principale car elles ne sont pas encore prêtes.
 
-4) Utilisez `git stash` pour enregistrer temporairement vos modifications non validées sans les commettre. Cela vous permet de basculer rapidement vers la branche principale sans perdre votre travail en cours.
+4) Utilisez `git stash` pour enregistrer temporairement vos modifications non validées sans les "commit". Cela vous permet de basculer rapidement vers la branche principale sans perdre votre travail en cours et sans faire de "commit".
 
 ```bash
 git stash "Travail en cours sur la fonctionnalité"
