@@ -54,21 +54,22 @@ git restore --staged
 
 ## Qu'est ce que le Repo ?
 
-
-
-
-
+Le terme "Repo" est une abréviation courante de "repository" en anglais, ce qui signifie en français "dépôt" ou "dépôt de code". Dans le contexte de Git, un repo (ou dépôt) Git est un emplacement où Git stocke l'historique des versions et les fichiers source d'un projet. C'est un élément central de Git, car il permet de suivre l'évolution du code source, de collaborer avec d'autres développeurs, de gérer les branches de développement, et bien plus encore. On retrouve tout ces éléments dans le dossier `.git`.
 
 
 ### Comment ca marche ?
 
+Comment ajouter des éléments de votre zone de transit (stage) à votre référentiel local (repo) ? La commande git git commit prend toutes les modifications dans la zone de transit (stage), les regroupe et les place dans votre referentiel local (repo). Un commit est simplement un point de contrôle indiquant à git de suivre tous les changements survenus jusqu'à présent en utilisant notre dernier commit comme comparaison. Après la validation, votre zone de transit sera vide.
 
+Comment pouvez-vous voir ce qui se trouve dans votre référentiel local (repo) ? Il existe quelques commandes que vous pouvez exécuter pour afficher différentes choses.
 
+`git ls-tree --full-tree -r HEAD`
 
+Cette commande affiche tous les fichiers de votre dépôt git qu'elle suit.
 
+`git log`
 
-
-
+Cette commande affiche un journal de tous les points de contrôle précédents dans mon référentiel. Si je souhaite voir plus d'informations sur un commit spécifique, j'exécute la commande `git show #commit#`pour voir ce qui a été modifié à ce point de contrôle spécifique.
 
 
 ## Qu'est ce que le HEAD ?
