@@ -1,16 +1,21 @@
 # Modèle décentralisé
 
 Il existe deux modèles, le centralisé et le décentralisé.
-    - Centralisé : Centralisation du code source du projet, les utilisateurs doivent se connecter au serveur pour travailler dessus. Exemple : GitHub
-    - Décentraliser : Le code source est hébergé sur un serveur distant, les utilisateurs sont cette fois invité à télécharger les fichiers pour pouvoir travailler de leurs cotés. Exemple : SVN
+
+- Centralisé : Centralisation du code source du projet, les utilisateurs doivent se connecter au serveur pour travailler dessus. Exemple : GitHub
+
+- Décentraliser : Le code source est hébergé sur un serveur distant, les utilisateurs sont cette fois invité à télécharger les fichiers pour pouvoir travailler de leurs cotés. Exemple : SVN
 
 
 ## Avantages et inconvénients du modèle 
 
 | Avantages | Inconvénients |
 | --------- | --------- |
-| Plus rapide  | Plus complexe | 
-| Plus de back-up | Portage windows si retours à la ligne différents | 
+| - Plus rapide  | - Plus complexe | 
+| - Plus de back-up | - Gestion des droits d'accès | 
+| - Travail hors ligne | - Besoin de synchronisation | 
+| - Historique | 
+| - Flexible | 
 
 ## .git 
 
