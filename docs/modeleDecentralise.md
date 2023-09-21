@@ -18,6 +18,6 @@ Il existe deux modèles, le centralisé et le décentralisé.
 
 ## .git 
 
-`.git` est un répertoire utiliser par git, il contient toutes les informations nécessaire à git pour suivre les données relatives au projet
+`.git` est un répertoire utiliser par git, il contient toutes les informations nécessaire à git pour suivre les données relatives au projet.
 
 
