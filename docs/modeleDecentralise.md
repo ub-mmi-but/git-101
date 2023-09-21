@@ -14,7 +14,9 @@ Avantages :
 Inconvénients : 
     - Plus complexe
     - Portage windows si retours à la ligne différents
+`
+## .git 
 
-.git 
+`.git` est un répertoire utiliser par git, il contient toutes les informations nécessaire a git pour suivre les données relatives au projet
 
 
