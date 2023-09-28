@@ -1,6 +1,9 @@
 site_name: 'Git 101'
 theme:
   name: 'material'
+  features:
+    - navigation.expand
+
 markdown_extensions:
   - admonition
   - pymdownx.details

@@ -1,5 +1,4 @@
-
-# Introduction à GIT
+# Qu'est ce que GIT ?
 
 ![Logo de Git](https://logowik.com/content/uploads/images/git6963.jpg "Logo de Git")
 
