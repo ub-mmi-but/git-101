@@ -32,7 +32,7 @@ Et notre note :
 [^1]: texte référencé.
 [^2]: On peut mettre deux espaces.
    Pour avoir une autre ligne a notre footnote.
-[^nom]: Named footnotes still appears as numbers, but can make it easier to identify and link references.
+[^nom]: Les footnotes nommés apparaissent toujours comme des nombres mais sont plus faciles a identifier lors de modifications
 ```
 
 
