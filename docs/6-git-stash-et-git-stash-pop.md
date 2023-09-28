@@ -6,11 +6,11 @@ Le stockage est pratique si vous avez besoin de changer rapidement de contexte e
 
 ## Un cas d'usage serait par exemple
 
-1) Vous travaillez sur la branche "feature-branch" et avez apporté plusieurs modifications à vos fichiers.
+1) Vous travaillez sur la branche __feature-branch__ et avez apporté plusieurs modifications à vos fichiers.
 
 2) Soudainement, un bug critique est signalé sur la branche principale ("main") et vous devez immédiatement corriger ce bug.
 
-3) Vous ne pouvez pas pousser vos modifications inachevées de la branche "feature-branch" vers la branche principale car elles ne sont pas encore prêtes.
+3) Vous ne pouvez pas pousser vos modifications inachevées de la branche __feature-branch__ vers la branche principale car elles ne sont pas encore prêtes.
 
 4) Utilisez `git stash` pour enregistrer temporairement vos modifications non validées sans les "commit". Cela vous permet de basculer rapidement vers la branche principale sans perdre votre travail en cours et sans faire de "commit".
 
@@ -25,7 +25,7 @@ git checkout main
 git commit -m "Correction du bug critique"
 ```
 
-6) Une fois le bug corrigé sur la branche principale, vous pouvez retourner à votre branche "feature-branch" en utilisant git checkout.
+6) Une fois le bug corrigé sur la branche principale, vous pouvez retourner à votre branche __feature-branch__ en utilisant git checkout.
 
 ```bash
 git checkout feature-branch
@@ -47,7 +47,7 @@ L'utilisation de git stash dans ce scénario vous permet de passer rapidement d'
 
 Un conflit Git Stash survient lorsque vous appliquez une mise en veille précédemment enregistrée (stash) et que les modifications que vous avez enregistrées entrent en conflit avec les modifications actuelles dans votre répertoire de travail. Voici un exemple simplifié pour illustrer un conflit Git Stash
 
-1) Vous êtes sur la branche "feature-branch" et avez apporté des modifications au fichier "mon_fichier.txt".
+1) Vous êtes sur la branche __feature-branch__ et avez apporté des modifications au fichier "mon_fichier.txt".
 
 2) Vous décidez d'enregistrer temporairement ces modifications dans un stash.
 
