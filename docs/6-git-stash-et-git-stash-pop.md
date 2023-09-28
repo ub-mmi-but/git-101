@@ -8,7 +8,7 @@ Le stockage est pratique si vous avez besoin de changer rapidement de contexte e
 
 1) Vous travaillez sur la branche "feature-branch" et avez apporté plusieurs modifications à vos fichiers.
 
-2) Soudainement, un bug critique est signalé sur la branche principale ("master") et vous devez immédiatement corriger ce bug.
+2) Soudainement, un bug critique est signalé sur la branche principale ("main") et vous devez immédiatement corriger ce bug.
 
 3) Vous ne pouvez pas pousser vos modifications inachevées de la branche "feature-branch" vers la branche principale car elles ne sont pas encore prêtes.
 
@@ -21,7 +21,7 @@ git stash "Travail en cours sur la fonctionnalité"
 5) Passez à la branche principale pour corriger le bug et effectuer une validation.
 
 ```bash
-git checkout master
+git checkout main
 git commit -m "Correction du bug critique"
 ```
 
