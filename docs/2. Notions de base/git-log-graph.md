@@ -6,7 +6,7 @@ Lors de projet Git, la commande `git commit`, qui permet de créer des instantan
 
 Pour obtenir un rendu graphique des commits de la branche, utilisez la commande `git log --graph --oneline`.
 
-![Git log graph](assets/git-log-graph.png)
+![Git log graph](/assets/git-log-graph.png)
 
 Pour obtenir un rendu graphique de toutes les branches du projet, utilisez la commande `git log --graph --oneline --all`.
 
@@ -33,7 +33,7 @@ Pour plus de détails sur les commandes `git log`, lancez la commande `git log -
 
 Un Git Graph est une représentation/revisualisation des **commits** et des évènements sur les différentes branches du projet.
 
-![Git Graph](<assets/ex-git-graph.png>)
+![Git Graph](</assets/ex-git-graph.png>)
 
 **Légende**
 
@@ -49,18 +49,18 @@ Un Git Graph est une représentation/revisualisation des **commits** et des év�
 
 Pour avoir accès au Git Graph du projet, il suffit d'aller sur l'onglet `Insight` de la barre de navigation de Github.
 
-![Nav bar Github](assets/nav-bar-github.png)
+![Nav bar Github](/assets/nav-bar-github.png)
 
 Ensuite, choisir `Network` et le graph s'affichera.
 
-![Git Graph Github](assets/git-graph-github.png)
+![Git Graph Github](/assets/git-graph-github.png)
 
 
 ### Gitlab
 
 Pour GitLab, il faut aller dans l'onglet `</> Code` puis choisir `Repository graph`. Même fonctionnement que pour Github, chaque couleur défini une branche du projet et chaque point un commit.
 
-![Git Graph Gitlab](assets/git-graph-gitlab.png)
+![Git Graph Gitlab](/assets/git-graph-gitlab.png)
 
 
 
@@ -68,8 +68,8 @@ Pour GitLab, il faut aller dans l'onglet `</> Code` puis choisir `Repository gra
 
 Il existe pour VS Code une extension pêrmettant de prévisualiser les Git Graph directement sur le projet en local, **Git Graph**.
 
-![Extension VS Code](<assets/extension-vscode.png>)
+![Extension VS Code](</assets/extension-vscode.png>)
 
 Une fois installer, il suffit de clicker sur le bouton `Git Graph` en bas de page.
 
-![Git Graph VS Code](assets/git-graph.png)
+![Git Graph VS Code](/assets/git-graph.png)

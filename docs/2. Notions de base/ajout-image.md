@@ -22,7 +22,7 @@ Il est possible de gérer le texte alternatif ``[Alt text]`` de l'image.
 
     ``![Un éléphant porté par une mongolfière](elephant_mongolfiere.jpg)``
 
-    ![Un éléphant porté par une mongolfière](assets/elephant_mongolfiere.jpg)
+    ![Un éléphant porté par une mongolfière](/assets/elephant_mongolfiere.jpg)
 
 ### Le lien de l'image
 
@@ -45,17 +45,17 @@ Dans l'exemple suivant, nous définirons le chemin du dossier dans lesquelles le
 
 Étape 1 : Aller dans les paramètres de VS Code ``Crtl + ,``
 
-![Alt text](assets/step1-ajout-image.png)
+![Alt text](/assets/step1-ajout-image.png)
 
 Étape 2 : Rechercher le terme ``Markdown``
 
-![Alt text](assets/step2-ajout-image.png)
+![Alt text](/assets/step2-ajout-image.png)
 
 Étape 3 : Cliquer sur le bouton ``Add Item``
 
-![Alt text](assets/step3-ajout-image.png)
+![Alt text](/assets/step3-ajout-image.png)
 
 Étape 4 : Dans le champs ``Item``, entrer le chemin de votre dossier. Ici on choisit n'importe quel dossier pour que cela fonctionne n'importe où.  
 Dans le champs ``Value``, entrer le nom du dossier où les images seront enregistrées. Le dossier sera créé automatiquement s'il n'existe pas déjà, ici on nomme notre dossier ``assets``.
 
-![Alt text](assets/step4-ajout-image.png)
+![Alt text](/assets/step4-ajout-image.png)
