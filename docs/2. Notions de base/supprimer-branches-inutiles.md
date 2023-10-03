@@ -8,4 +8,4 @@ Quand les PRs sont mergées, on peut supprimer la branche de github. Mais en loc
 
 Pour supprimer les branche inutiles, nous utilisons la commande `git fetch -p`. Cette commande va supprimer les branches inutiles et vous afficher les nouvelles branches du projet.
 
-![Exemple du rendu git fetch -p](assets/image-4.png)
+![Exemple du rendu git fetch -p](/assets/image-4.png)
