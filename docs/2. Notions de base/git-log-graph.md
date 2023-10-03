@@ -4,11 +4,17 @@
 
 Lors de projet Git, la commande `git commit`, qui permet de créer des instantanés du projet et d'enregistrer les modifications du projet, est très souvent utilisé. Tous les `commit` sont enregistrer dans un historique qui peut vite devenir compliqué à explorer. C'est pourquoi il existe une commande `git log` qui permet d'afficher les commits, de les filtrer et même de rechercher une modification précise.
 
-Pour obtenir un rendu graphique des commits de la branche, utilisez la commande `git log --graph --oneline`.
+Pour obtenir un rendu graphique des commits de la branche, utilisez la commande ci-dessous:
+ ```
+ git log --graph --oneline
+ ```
 
 ![Git log graph](/assets/git-log-graph.png)
 
-Pour obtenir un rendu graphique de toutes les branches du projet, utilisez la commande `git log --graph --oneline --all`.
+Pour obtenir un rendu graphique de toutes les branches du projet, utilisez la commande ci-dessous:
+ ```
+ git log --graph --oneline --all
+ ```
 
 ### Syntaxe de Git Log
 
