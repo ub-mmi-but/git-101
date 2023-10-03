@@ -1,5 +1,6 @@
 # La commande `git stash`
 
+:material-information-outline:{ title="Important information" }
 `git stash` met temporairement de côté les modifications que vous avez apportées à votre copie de travail afin que vous puissiez travailler sur autre chose, puis revenir et les réappliquer plus tard.
 
 Le stockage est pratique si vous avez besoin de changer rapidement de contexte et de travailler sur autre chose, mais que vous êtes à mi-chemin d'un changement de code et que vous n'êtes pas tout à fait prêt à vous engager.

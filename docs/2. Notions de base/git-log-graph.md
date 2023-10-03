@@ -4,6 +4,7 @@
 
 Lors de projet Git, la commande `git commit`, qui permet de créer des instantanés du projet et d'enregistrer les modifications du projet, est très souvent utilisé. Tous les `commit` sont enregistrer dans un historique qui peut vite devenir compliqué à explorer. C'est pourquoi il existe une commande `git log` qui permet d'afficher les commits, de les filtrer et même de rechercher une modification précise.
 
+:material-information-outline:{ title="Important information" }
 Pour obtenir un rendu graphique des commits de la branche, utilisez la commande `git log --graph --oneline`.
 
 ![Git log graph](/assets/git-log-graph.png)
@@ -66,6 +67,7 @@ Pour GitLab, il faut aller dans l'onglet `</> Code` puis choisir `Repository gra
 
 ## Une extension VS Code
 
+:material-information-outline:{ title="Important information" }
 Il existe pour VS Code une extension pêrmettant de prévisualiser les Git Graph directement sur le projet en local, **Git Graph**.
 
 ![Extension VS Code](</assets/extension-vscode.png>)

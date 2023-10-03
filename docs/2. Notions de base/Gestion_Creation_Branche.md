@@ -2,6 +2,7 @@
 
 Git permet la création de branches afin de mieux répartir le travail et éviter les erreurs sur la version de production
 ## Créer des branches  
+:material-information-outline:{ title="Important information" }
 Il existe plusieurs façons de créer une branche avec Git.  
 La plus commune étant d'utiliser la commande suivante :  
  **git checkout -b** (-b signifiant la creation d'une nouvelle branche) **nom_de_notre_nouvelle_branche** (cela peut être suivie du nom de la branche parente). Voici un exemple :  

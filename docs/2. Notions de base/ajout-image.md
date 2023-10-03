@@ -39,6 +39,7 @@ Il est possible d'utiliser des chemins absoluts/relatifs mais aussi hébergés s
 
 ### Emplacement de l'image dans le dossier de travail
 
+:material-information-outline:{ title="Important information" }
 Lors du copier/coller, l'image apparait par défaut dans le dossier de travail. Cependant, il est possible de décider du chemin par défaut.
 
 Dans l'exemple suivant, nous définirons le chemin du dossier dans lesquelles les images seront enregistrées.

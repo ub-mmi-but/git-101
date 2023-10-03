@@ -1,6 +1,10 @@
 # SSH
 
-**SSH** (***Secure Socket Shell***) est un **protocole** de sécurité pour les **communications réseau**, principalement utilisé pour l'accès sécurisé à distance aux ordinateurs et le **transfert de fichiers**. C'est SSH qui vous permet de transférer vos push et pull en toute **sécurité**.
+:material-information-outline:{ title="Important information" }
+**SSH** est un **protocole** de sécurité pour les **communications réseau**, principalement utilisé pour l'accès sécurisé à distance aux ordinateurs et le **transfert de fichiers**. C'est SSH qui vous permet de transférer vos push et pull en toute **sécurité**.
+
+*[SSH]: (Secure Socket Shell) 
+
 ## Setup
 
 Pour être capable d'intéragir avec vos projets GitHub/GitLab, il faut donc une clé SSH.

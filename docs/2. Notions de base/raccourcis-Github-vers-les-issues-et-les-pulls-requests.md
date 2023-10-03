@@ -2,6 +2,7 @@
 
 ## Les Pulls Requests
 
+:material-information-outline:{ title="Important information" }
 Pour fermer une issue lors d'une pull request, il est possible d'ajouter dans la description l'un des mots suivants suivie du numéro de l'issue : 
 
 ```

@@ -2,6 +2,7 @@
 
 ## Pourquoi amender un commit ?
 
+:material-information-outline:{ title="Important information" }
 Amender un commit est utile pour corriger ses erreurs. Il permet de supprimer le dernier commit et de le remplacer par un nouveau. Trés utile dans le cas où vous avez oublié un fichier ou que le message du commit ne repecte pas la convention de nommage.
 
 ## Comment amender un commit ?
