@@ -18,6 +18,22 @@ Vous devez ensuite lancer cette commande :
 docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
 ```
 
+# Mise en forme : feuille de style pour les titres
+
+## La feuille de style
+
+Commencez d'abord par créer votre feuille de style et placez la dans un dossier.
+
+Par exemple : 
+
+```
+docs/stylesheets/extra.css
+```
+
+## Rendez-vous sur la documentation de Mkdocs-material : 
+
+https://squidfunk.github.io/mkdocs-material/
+
 
 ## Footnotes
 
@@ -48,3 +64,5 @@ See note here[^nom]
 [^2]: On peut mettre deux espaces.
    Pour avoir une autre ligne a notre footnote.
 [^nom]: Les footnotes nommés apparaissent toujours comme des nombres mais sont plus faciles a identifier lors de modifications
+
+
