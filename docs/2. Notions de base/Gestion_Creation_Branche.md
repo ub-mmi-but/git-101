@@ -1,7 +1,8 @@
-# Introduction  
+# Créer et gérer les branches  
 
 Git permet la création de branches afin de mieux répartir le travail et éviter les erreurs sur la version de production
 ## Créer des branches  
+
 Il existe plusieurs façons de créer une branche avec Git.  
 La plus commune étant d'utiliser la commande suivante :  
  **git checkout -b** (-b signifiant la creation d'une nouvelle branche) **nom_de_notre_nouvelle_branche** (cela peut être suivie du nom de la branche parente). Voici un exemple :  
@@ -19,49 +20,86 @@ Si l'on veut se diriger vers cette branche il faut de nouveau utiliser la comman
 
 ````
 git checkout feature
+Il existe plusieurs façons de créer une branche avec Git, la plus commune étant d'utiliser la commande suivante :  
+````
+git checkout -b nom_de_notre_nouvelle_branche
 ````
 
-Il peut arriver qu'on ne sache plus où on en est. Alors il est possible de visualiser toutes les branches avec la commande **git branch -a**.
+> *La commande `-b` sert à préciser la création d'une nouvelle branche.*
+ 
+!!! example "Exemple"
+
+    ````
+    git checkout -b feature main
+    ````
+
+Cette commande va créer et diriger directement sur la nouvelle branche.
+Si l'on ne souhaite pas aller directement sur la branche, alors la commande suivante convient :  
+
+````
+git branch nom_de_la_branche
+````
+
+!!! example "Exemple"
+
+    ````
+    git branch feature
+    ````
+
+Si l'on veut se diriger vers cette branche il faut de nouveau utiliser la commande checkout : 
 
 ````
 git branch -a
+git checkout nom_de_la_branche 
 ````
 
-Pour supprimer une branche obselète il suffit de mettre -d. (pensez à merge la branche avant de la supprimer, sinon une **erreur** apparaitra !).
+!!! info "Vous êtes perdu ?"
+  
+    Pour visualiser toutes les branches, utilisez la commande `git branch -a`.
+
+## Gestion des branches
+  
+Pour **supprimer** une branche obselète il suffit de mettre -d. (pensez à merge la branche avant de la supprimer, sinon une erreur apparaitra !).
 
 ````
 git branch -d branche_a_suppr
 ````
 
-Dans le cas où vous voulez supprimer la branche **sans merge**(si l'experimentation est ratée).
+!!! warning "Attention !"
 
 ```
 git branch -D branche_a_suppr
 ```
+    Avant de supprimer une branche, pensez à la *[merge](listingcommand.md/#git-merge)*.
 
-**BRAVO !!** Dorénavant vous savez créer et supprimer des branches ! 
-Maintenant nous allons apprendre à les **gérer**.
+    Si vous voulez supprimer une branche __sans merge__, utilisez la commande `$ git branch -D branche_a_suppr`.
 
-## Gestion des branches
-  
-Git met à disposition des outils pour gérer vos branches.
 
-Déjà si vous voulez savoir dans quelle branche vous êtes : 
+## Situer sa branche
+
+Pour savoir dans quelle branche vous vous trouvez : 
+
 ```
 git branch
 ```
-*La branche avec l'étoile est votre branche actuelle (peut être accompagné d'un message explicit).*
 
-Vous pouvez rajouter -v pour voir les derniers commit sur chaque branches : 
-```
-git branch -v
-```
+> *La branche avec l'étoile est votre branche actuelle.*
 
-Si jamais vous voulez voir quels branches vous pouvez supprimer c'est à dire les branches qui ont été merged alors ajoutez --merged (--no-merged si vous voulez voir celles avec des travaux en cours).
+!!! info "Info"
 
-```
-git branch --merged
-```
+    - Vous pouvez ajouter -v pour voir les derniers commit sur chaque branches : 
+    ```
+    git branch -v
+    ```
+
+    - Pour voir les branches "merged"/"no-merged" : 
+    ```
+    git branch --merged
+    ```
+    **OU**
+    ```
+    git branch --no-merged
+    ```
 
 ## Renommer une branche
 
@@ -74,4 +112,7 @@ Pour apporter la modification au serveur distant :
 ```
 git push --set-upstream origin nom-de-branche-corrigé
 ```
-Vous avez dorénavant toutes les clés en main pour créer supprimer et gérer les branches.
+
+-------------------------------
+
+Vous avez dorénavant toutes les clés en main pour créer supprimer et gérer les branches !
