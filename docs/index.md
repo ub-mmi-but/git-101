@@ -1,3 +1,4 @@
+
 # Introduction à GIT
 
 ![Logo de Git](https://logowik.com/content/uploads/images/git6963.jpg "Logo de Git")
@@ -19,3 +20,4 @@ De plus, Git offre un historique détaillé de toutes les modifications apporté
 Git permet de facilement partager le code du projet que ce soit en local ou sur un ordinateur, en réseau local ou à distance grâce à des services d'hébergement de code tels que [GitHub](https://github.com), [GitLab](https://about.gitlab.com) et [Bitbucket](https://bitbucket.org). Ces plateformes permettent de partager facilement le code, de collaborer avec d'autres développeurs, de suivre les problèmes et de gérer les demandes de fusion (pull requests).
 
 [Voir l'introduction de Github](./github.md)
+
