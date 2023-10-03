@@ -4,18 +4,18 @@ Dans cette documentation, vous apprendrez comment ajouter des images facilement 
 
 ## Copier / Coller
 
-Pour copier/coller une image, il vous suffit de copier une image ``Ctrl + C`` ou ``Cmd + C`` et de coller l'image ``Ctrl + V`` ou ``Cmd + V`` sur le document VS Code.
+Pour copier/coller une image, il vous suffit de copier une image ++ctrl+c++ ou ++cmd+c++ et de coller l'image ++ctrl+v++ ou ++cmd+v++ sur le document VS Code.
 
-Cela aura pour conséquence d'insérer une ligne de ce genre : ``![Alt text](image.png)``
+Cela aura pour conséquence d'insérer une ligne de ce genre : `![Alt text](image.png)`
 
 ## Paramètres de l'image
 
 ### Le texte alternatif
 
-Il est possible de gérer le texte alternatif ``[Alt text]`` de l'image.
+Il est possible de gérer le texte alternatif `[Alt text]` de l'image.
 
-!!! info  
-  
+!!! info
+
     Pour plus d'informations à propos du [Texte alternatif](https://developer.mozilla.org/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#texte_alternatif).
 
 !!! example "Exemple"
@@ -26,10 +26,10 @@ Il est possible de gérer le texte alternatif ``[Alt text]`` de l'image.
 
 ### Le lien de l'image
 
-Il est possible d'utiliser des chemins absoluts/relatifs mais aussi hébergés sur le Web.  
+Il est possible d'utiliser des chemins absoluts/relatifs mais aussi hébergés sur le Web.
 
 !!! info
-    Pour plus d'informations à propos des [URL](https://developer.mozilla.org/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+Pour plus d'informations à propos des [URL](https://developer.mozilla.org/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 
 !!! example "Exemple"
 
@@ -43,19 +43,19 @@ Lors du copier/coller, l'image apparait par défaut dans le dossier de travail. 
 
 Dans l'exemple suivant, nous définirons le chemin du dossier dans lesquelles les images seront enregistrées.
 
-Étape 1 : Aller dans les paramètres de VS Code ``Crtl + ,``
+Étape 1 : Aller dans les paramètres de VS Code ++ctrl+plus++
 
 ![Alt text](/assets/step1-ajout-image.png)
 
-Étape 2 : Rechercher le terme ``Markdown``
+Étape 2 : Rechercher le terme `Markdown`
 
 ![Alt text](/assets/step2-ajout-image.png)
 
-Étape 3 : Cliquer sur le bouton ``Add Item``
+Étape 3 : Cliquer sur le bouton `Add Item`
 
 ![Alt text](/assets/step3-ajout-image.png)
 
-Étape 4 : Dans le champs ``Item``, entrer le chemin de votre dossier. Ici on choisit n'importe quel dossier pour que cela fonctionne n'importe où.  
-Dans le champs ``Value``, entrer le nom du dossier où les images seront enregistrées. Le dossier sera créé automatiquement s'il n'existe pas déjà, ici on nomme notre dossier ``assets``.
+Étape 4 : Dans le champs `Item`, entrer le chemin de votre dossier. Ici on choisit n'importe quel dossier pour que cela fonctionne n'importe où.  
+Dans le champs `Value`, entrer le nom du dossier où les images seront enregistrées. Le dossier sera créé automatiquement s'il n'existe pas déjà, ici on nomme notre dossier `assets`.
 
 ![Alt text](/assets/step4-ajout-image.png)

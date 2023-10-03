@@ -2,7 +2,7 @@
 
 ## Les Pulls Requests
 
-Pour fermer une issue lors d'une pull request, il est possible d'ajouter dans la description l'un des mots suivants suivie du numéro de l'issue : 
+Pour fermer une issue lors d'une pull request, il est possible d'ajouter dans la description l'un des mots suivants suivie du numéro de l'issue :
 
 ```
 close
@@ -22,18 +22,18 @@ resolved
 
 ## Raccourcis Clavier
 
-Voici des raccourcis utile sur Github en utilisant le clavier : 
+Voici des raccourcis utile sur Github en utilisant le clavier :
 
-- Pour aller sur la page des issues, il est possible de faire  `G + I `
-- Pour aller sur la page du code, il est possible de faire `G + C`
-- Pour aller sur la page des pull request, il est possible de faire `G + P`
-- Pour aller sur la page des notifications, il est possible de faire `G + N`
-- Pour ouvrir la palette de commandes GitHub, il est possible de faire `Ctrl + K`
-- Si vous modifiez du texte Markdown, ouvrez la palette de commandes avec `Ctrl + Alt + K`
-- Pour ouvrir la barre de recherche, il est possible de faire `S` ou `/`
+- Pour aller sur la page des issues, il est possible de faire ++g+i++
+- Pour aller sur la page du code, il est possible de faire ++g+c++
+- Pour aller sur la page des pull request, il est possible de faire ++g+p++
+- Pour aller sur la page des notifications, il est possible de faire ++g+n++
+- Pour ouvrir la palette de commandes GitHub, il est possible de faire ++ctrl+k++ et pour mac ++command+k++
+- Si vous modifiez du texte Markdown, ouvrez la palette de commandes avec ++ctrl+alt+k++ et pour mac ++command+option+k++
+- Pour ouvrir la barre de recherche, il est possible de faire ++k++ ou ++slash++
 
-Sur une issue, il est possible d'appuyer sur : 
+Sur une issue, il est possible d'appuyer sur :
 
-- `L` pour ajouter des étiquettes
-- `A` pour assigner des contributeurs à l'issue
-- `X` pour lier une branche à l'issue
+- ++l++ pour ajouter des étiquettes
+- ++a++ pour assigner des contributeurs à l'issue
+- ++x++ pour lier une branche à l'issue
