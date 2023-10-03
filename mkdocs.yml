@@ -10,7 +10,8 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - footnotes
-  
+  - pymdownx.keys
+
 extra_css:
   - stylesheets/title.css
   - pymdownx.critic
