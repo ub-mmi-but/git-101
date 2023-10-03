@@ -6,7 +6,7 @@ Pour comprendre pleinement la dynamique de Git, il est essentiel de saisir comme
 
 ## Qu'est ce que la Working Directory ?
 
-C'est la première zone qu'on utilise, dossier de travail. Dès qu’on a initialisé Git sur un projet, tout travail versionné (ajouts, suppressions, modifications) a lieu dans cette zone. Simplement c'est ca zone de travail sur son ordinateur. 
+:material-information-outline:{ title="Important information" } C'est la première zone qu'on utilise, dossier de travail. Dès qu’on a initialisé Git sur un projet, tout travail versionné (ajouts, suppressions, modifications) a lieu dans cette zone. Simplement c'est ca zone de travail sur son ordinateur. 
 
 
 
@@ -17,7 +17,7 @@ En résumé, le working directory est la copie des fichiers sur la branche activ
 
 ## Qu'est ce que le Stage ?
 
- Le stage est une zone dédiée à la préparation des commits : le stage. On peut la voir comme une zone tampon dans laquelle on va lister les modifications qu’on souhaite mettre dans notre prochain commit (ajouts, suppressions, tout ou partie des modifications).
+ :material-information-outline:{ title="Important information" } Le stage est une zone dédiée à la préparation des commits : le stage. On peut la voir comme une zone tampon dans laquelle on va lister les modifications qu’on souhaite mettre dans notre prochain commit (ajouts, suppressions, tout ou partie des modifications).
 
 Qui dit préparation au commit dit qu’on peut ajouter ou retirer des éléments au stage avant de commiter. 
 
@@ -55,7 +55,7 @@ git diff
 
 ## Qu'est ce que le Repo ?
 
-Le repo est la copie du projet github, un repo (ou dépôt) Git est un emplacement où Git stocke l'historique des versions et les fichiers source d'un projet.
+:material-information-outline:{ title="Important information" } Le repo est la copie du projet github, un repo (ou dépôt) Git est un emplacement où Git stocke l'historique des versions et les fichiers source d'un projet.
 On retrouve tout ces éléments dans le dossier `.git`.
 Le terme "Repo" est une abréviation courante de "repository" en anglais, ce qui signifie en français "dépôt" ou "dépôt de code".  C'est un élément central de Git, car il permet de suivre l'évolution du code source, de collaborer avec d'autres développeurs, de gérer les branches de développement, et bien plus encore. 
 
@@ -78,6 +78,7 @@ Cette commande affiche un journal de tous les points de contrôle précédents d
 
 On considère le plus souvent HEAD comme un pointeur sur le dernier commit de la branche courante. C'est généralement le cas, mais pas tout le temps.
 
+:material-information-outline:{ title="Important information" } 
 HEAD est bien un pointeur, une référence vers un emplacement donné de notre historique (un commit si tu préfères). Il a deux fonctions 
 principales :
 
