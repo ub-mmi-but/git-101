@@ -1,6 +1,6 @@
-site_name: 'Git 101'
+site_name: "Git 101"
 theme:
-  name: 'material'
+  name: "material"
   features:
     - toc.integrate
     - navigation.tabs
@@ -8,8 +8,12 @@ theme:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - footnotes
 extra_css:
   - stylesheets/title.css
-
+  - stylesheets/mermaid.css
