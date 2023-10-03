@@ -2,24 +2,6 @@
 
 Git permet la création de branches afin de mieux répartir le travail et éviter les erreurs sur la version de production
 ## Créer des branches  
-
-Il existe plusieurs façons de créer une branche avec Git.  
-La plus commune étant d'utiliser la commande suivante :  
- **git checkout -b** (-b signifiant la creation d'une nouvelle branche) **nom_de_notre_nouvelle_branche** (cela peut être suivie du nom de la branche parente). Voici un exemple :  
-``` git
-git checkout -b feature main
-```
-Cette méthode va créer et diriger directement sur la nouvelle branche.
-Si l'on ne souhaite pas tout de suite être redirigé, alors la commande suivante convient :  
-git branch **nom_de_la_branche** 
-
-````
-git branch feature
-````
-Si l'on veut se diriger vers cette branche il faut de nouveau utiliser la commande checkout : 
-
-````
-git checkout feature
 Il existe plusieurs façons de créer une branche avec Git, la plus commune étant d'utiliser la commande suivante :  
 ````
 git checkout -b nom_de_notre_nouvelle_branche
@@ -49,7 +31,6 @@ git branch nom_de_la_branche
 Si l'on veut se diriger vers cette branche il faut de nouveau utiliser la commande checkout : 
 
 ````
-git branch -a
 git checkout nom_de_la_branche 
 ````
 
@@ -62,14 +43,11 @@ git checkout nom_de_la_branche
 Pour **supprimer** une branche obselète il suffit de mettre -d. (pensez à merge la branche avant de la supprimer, sinon une erreur apparaitra !).
 
 ````
-git branch -d branche_a_suppr
+$ git branch -d branche_a_suppr
 ````
 
 !!! warning "Attention !"
 
-```
-git branch -D branche_a_suppr
-```
     Avant de supprimer une branche, pensez à la *[merge](listingcommand.md/#git-merge)*.
 
     Si vous voulez supprimer une branche __sans merge__, utilisez la commande `$ git branch -D branche_a_suppr`.
@@ -105,12 +83,12 @@ git branch
 
 Renommer localement : 
 ```
-git branch --move mauvais-nom-de-branche nouveau-nom-de-branche
+$ git branch --move mauvais-nom-de-branche nouveau-nom-de-branche
 ```
 
 Pour apporter la modification au serveur distant : 
 ```
-git push --set-upstream origin nom-de-branche-corrigé
+$ git push --set-upstream origin nom-de-branche-corrigé
 ```
 
 -------------------------------
