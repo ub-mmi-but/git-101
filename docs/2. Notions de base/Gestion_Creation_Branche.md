@@ -19,7 +19,7 @@ Cette commande va créer et diriger directement sur la nouvelle branche.
 Si l'on ne souhaite pas aller directement sur la branche, alors la commande suivante convient :  
 
 ````
-git branch **nom_de_la_branche** 
+git branch nom_de_la_branche
 ````
 
 !!! example "Exemple"
@@ -31,7 +31,7 @@ git branch **nom_de_la_branche**
 Si l'on veut se diriger vers cette branche il faut de nouveau utiliser la commande checkout : 
 
 ````
-git checkout **nom_de_la_branche** 
+git checkout nom_de_la_branche 
 ````
 
 !!! info "Vous êtes perdu ?"
