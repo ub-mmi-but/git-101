@@ -2,7 +2,8 @@ site_name: 'Git 101'
 theme:
   name: 'material'
   features:
-    - navigation.expand
+    - toc.integrate
+    - navigation.tabs
 
 markdown_extensions:
   - admonition
