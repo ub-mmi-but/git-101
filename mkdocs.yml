@@ -5,6 +5,8 @@ theme:
     - toc.integrate
     - navigation.tabs
     - navigation.footer
+    - navigation.tabs.sticky
+    - navigation.top
 
 markdown_extensions:
   - admonition
