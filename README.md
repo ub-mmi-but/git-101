@@ -21,6 +21,9 @@ docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
 
 ## Footnotes
 
+Une footnote permet fournir des informations supplémentaires ou des références dans un document, qui seront situé en pied de page. Généralement utilisé pour ajouter des définitions, des sources et explications pertinentes au contenu principal.
+
+
 Pour faire une footnote il faut deux choses, une mentions de la footnote :
 ```markdown
 Footnote[^1].
