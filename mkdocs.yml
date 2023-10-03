@@ -4,6 +4,7 @@ theme:
   features:
     - toc.integrate
     - navigation.tabs
+    - navigation.footer
 
 markdown_extensions:
   - admonition
