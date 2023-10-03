@@ -65,11 +65,15 @@ Comment ajouter des éléments de votre zone de transit (stage) à votre référ
 
 Comment pouvez-vous voir ce qui se trouve dans votre référentiel local (repo) ? Il existe quelques commandes que vous pouvez exécuter pour afficher différentes choses.
 
-`git ls-tree --full-tree -r HEAD`
+```
+git ls-tree --full-tree -r HEAD
+```
 
 Cette commande affiche tous les fichiers de votre dépôt git qu'elle suit.
 
-`git log`
+```
+git log
+```
 
 Cette commande affiche un journal de tous les points de contrôle précédents dans mon référentiel. Si je souhaite voir plus d'informations sur un commit spécifique, j'exécute la commande `git show #commit#`pour voir ce qui a été modifié à ce point de contrôle spécifique.
 
