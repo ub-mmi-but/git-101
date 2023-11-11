@@ -1,6 +1,9 @@
 site_name: "Git 101"
 theme:
   name: 'material'
+  logo: '/assets/mmi.svg'
+  favicon: '/assets/mmi.svg'
+
   features:
     - toc.integrate
     - navigation.tabs
