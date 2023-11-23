@@ -29,10 +29,24 @@ Pour conclure nos commits aurons la structure `<type>(<issue>): <message>`.
 
 !!! example "Exemple de commits"
 
-    `feat(36): Ajoute la fonction de connexion`  
-    `fix(2): Corrige le bug de validation du mot de passe`  
-    `refactor(78): Réorganise la structure HTML de la barre de navigation`  
-    `docs(14): Met à jour la documentation d'installation`  
-    `style(25): Corrige l'indentation et le formatage`  
-    `test(65): Ajoute des tests pour la fonction de déconnexion`  
-    `chore(98): Met à jour les dépendances`  
+    ```
+    feat(36): Ajoute la fonction de connexion
+    ```  
+    ```
+    fix(2): Corrige le bug de validation du mot de passe
+    ```
+    ```
+    refactor(78): Réorganise la structure HTML de la barre de navigation
+    ``` 
+    ```
+    docs(14): Met à jour la documentation d'installation
+    ```
+    ```
+    style(25): Corrige l'indentation et le formatage
+    ```
+    ```
+    test(65): Ajoute des tests pour la fonction de déconnexion
+    ```  
+    ```
+    chore(98): Met à jour les dépendances
+    ```

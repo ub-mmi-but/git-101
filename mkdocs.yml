@@ -4,6 +4,10 @@ theme:
   features:
     - toc.integrate
     - navigation.tabs
+    - navigation.footer
+    - navigation.tabs.sticky
+    - navigation.top
+    - content.code.copy
 
 markdown_extensions:
   - admonition
@@ -14,6 +18,13 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - footnotes
+  - pymdownx.keys
+
 extra_css:
   - stylesheets/title.css
   - stylesheets/mermaid.css
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
