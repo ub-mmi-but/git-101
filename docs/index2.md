@@ -244,4 +244,6 @@ Erreur Permission Denied (Publickey)
 
 Un fichier de dépendances à été ajouté (git ignore)
 
+Mon push a été rejeté parce que Emma a déjà push un commit avant moi, sur la même branche => `git pull --rebase`
+
 On a pull une branche qui avait été rebase. => `git config pull.ff only       # avance rapide seulement`
