@@ -1,5 +1,16 @@
 # Getting started with Git
 
+## Plan de l'histoire
+
+- Le projet d'Emma et Eric
+- Création d'un projet GitHub
+- Création d'un projet git local
+- Clone du projet par Eric
+  - Il essaie de push des modifs sur main, mais se fait rejeter parce qu'Emma a push un deuxième commit depuis son clonage
+  - Il fait une branche du coup.
+    - checkout, checkout -b, push, lien vers la doc Git Flow
+- Form, API, mot de passe, réécriture, rebase onto
+
 ## **Installation d’un projet**
 
 Le département Informatique a pour projet de développer le nouveau site de la licence informatiques.
@@ -48,7 +59,7 @@ Emma part faire une pause café et Eric trouve la bonne idée de **supprimer** c
 
 Emma ne le remarque pas et souhaite sauvegarder une première fois son projet sur Github, elle utilise pour cela la commande suivante :
 
-- `git add –all` (ajoute tous les fichiers dans le futurs **commit** afin de les amener sur le repo distant)
+- `git add --all` (ajoute tous les fichiers dans le futurs **commit** afin de les amener sur le repo distant)
   
 !!! danger
     Oh mon dieu ! Tout a été ajouté ! Tous les modules on été ajouté dans le `commit`, ceci est une très mauvaise chose.
@@ -102,7 +113,18 @@ Elle réalise enuite la commande `git status` pour vérifier si les modules sont
     Pour résoudre ce propblème, elle doit réaliser la commande `git restore --staged .` afin enlever les fichiers nodes-modules du Staging Area.
 
 	!!! failure
-		Vu qu'Emma n'a pas encore 'commit' une seule fois, le pointeur HEAD (référence au dernier commir réalisé dans la branche courrante) n'a pas été créer ce qui amène sur une erreur (copie colle erreur)
+		Vu qu'Emma n'a pas encore 'commit' une seule fois, le pointeur HEAD (référence au dernier commit réalisé dans la branche courante) n'a pas été créé ce qui amène sur une erreur
+
+        ```
+        fatal: Could not resolve HEAD
+        ```
+    
+    Emma a le bon réflexe. Elle va voir [la documentation de git](https://docs.gitlab.com/ee/topics/git/unstage.html) pour supprimer un fichier du stage, puis fait `git rm --cached ./node_modules`.
+
+    Comme `node_modules` est un dossier, elle a l'erreur `fatal: Not removing './node_modules' recursively without -r`. Elle ajoute donc l'argument `-r`
+
+    !!! success
+        `git rm -r --cached ./node_modules`, tout va bien ! Les node_modules ne sont plus dans le stage.
 
 Désormais, Emma n'a plus de problèmes avec le `.gitignore` Emma peut donc essayer d'envoyer son travail sur Github à l'aide des commandes suivantes:
 
@@ -200,6 +222,8 @@ Il y a bien 2 branches et l'astérix est positionner sur `feature-form` montrant
 La commande `checkout` permet de se déplacer sur une branche et  -->
 
 ### CAS DE PROBLÈMES COURANTS
+
+"Je vois pas tes modifs" : Eric est pas sur la bonne branche, ou il a pas fetch
 
 Branche qui change de nom et crée un conflit :
 Merge la branche qui pose problème sur la bonne branche qui respecte la bonne convention de nommage. Supprimer la branche problématique
