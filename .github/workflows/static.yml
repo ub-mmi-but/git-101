@@ -1,38 +1,29 @@
-name: Deploiement de la page
-
+name: documentation
 on:
-  # Branche à déployer quand celle-ci subit un push
   push:
-    branches: ["main"]
-
-  workflow_dispatch:
-
-# Autorisations GitHub
+    branches:
+      - main
+      - deploiement-automatique
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Autorisation que d'un déploiement à la fois et empêche d'annuler celui-ci
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
+  contents: write
 jobs:
   deploy:
-    environment:
-      name: Deploiement de la doc
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+      - uses: actions/checkout@v4
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - uses: actions/setup-python@v4
         with:
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v3
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      - run: pip install mkdocs-material 
+      - run: mkdocs gh-deploy --force
