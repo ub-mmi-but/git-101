@@ -6,34 +6,34 @@
 - Création d'un projet GitHub
 - Création d'un projet git local
 - Clone du projet par Eric
-  - Il essaie de push des modifs sur main, mais se fait rejeter parce qu'Emma a push un deuxième commit depuis son clonage
-  - Il fait une branche du coup.
+  - Il essaie de push des modifications sur 'main', mais sa tentativ est rejetée car Emma a push un deuxième commit depuis son clonage.
+  - Il fait crée branche.
     - checkout, checkout -b, push, lien vers la doc Git Flow
 - Form, API, mot de passe, réécriture, rebase onto
 
 ## **Installation d’un projet**
 
-Le département Informatique a pour projet de développer le nouveau site de la licence informatiques.
+Le département Informatique a pour projet de développer le nouveau site du BUT Informatique.
 
 Afin de mener à bien ce projet et de ne pas répéter les erreurs de développement des précédentes équipes, Emma et Eric, étudiant en BUT Informatique en charge du projet, vont créer un nouvel environnement de travail.
 
-Ils vont utiliser  **[Github](./github.md)** afin de pouvoir travailler à plusieurs sur un même projet et ainsi conserver une trace de tout les modifications ajoutés au futur nouveau site Web.
+Ils vont utiliser  **[Github](./github.md)** afin de pouvoir travailler à plusieurs sur un même projet et ainsi conserver une trace de tout les modifications ajoutées au futur nouveau site Web.
 
 ### I) Création du repository sur Github
 
-Emma est chargée de créer l'environnement Github. Elle va pour cela réalisé les étapes ci-dessous :
+Emma est chargée de créer l'environnement Github. Pour cela, voici comment elle va procéder :
 
-1. Création d’un **repo** (projet) distant sur Github nommé "Site-des-informatiques"
+1. Création d’un **repository** (projet) distant sur Github nommé "Site-des-informatiques"
 2. Laisser le repository en public
-3. Laisser décocher le Readme (On en créera un plus tard si besoin)
+3. Laisser décoché le Readme (On en créera un plus tard si besoin)
 4. Cliquer sur "Create repository"
 
 !!! success
-    Nous avons maintenant un repository sur Github, Github étant un [modèle décentralisé](./modeleDecentralise.md), nous avons besoin de créer un environnement de travail sur notre machine en local.
+    Nous avons maintenant un repository sur Github. Github étant un [modèle décentralisé](./modeleDecentralise.md), nous avons besoin de créer un environnement de travail sur notre machine en local.
 
 ### II) Création du repository en local
 
-Maintenant qu'Emma à créer le projet sur Github, elle doit maintenant créer le dossier qui acceuillera le projet sur sa machine, en local.
+Maintenant qu'Emma à créé le projet sur Github, elle doit maintenant créer le dossier qui acceuillera le projet sur sa machine, en local.
 
 1. Créer un dossier sur votre pc
 2. L’ouvrir via un environnement de développement intégré (IDE), ici nous utiliserons Visual Studio Code :
@@ -44,7 +44,7 @@ Maintenant qu'Emma à créer le projet sur Github, elle doit maintenant créer l
     - `git remote add origin https://Github.com/User/Site-des-informatiques.git`
 
 !!! failure
-    Emma a un problème en local, sa branche par défaut s'appelle **master** tandis que dans le repository distant, elle s'appelle main.
+    Emma a un problème en local, sa branche par défaut s'appelle **master** tandis que dans le repository distant elle s'appelle **main**.
     Pour régler ce problème, Emma a la super idée d’utiliser la commande suivante :
 
     - `git branch -M main`  (renomme la branche **master** dans laquelle Emma se trouve en **main**)
@@ -55,18 +55,18 @@ Pour réaliser le site, Eric et Emma ont décidé d'utiliser un **framework** ba
 
 Ils installent le projet via Next.Js sur l'ordinateur d'Emma, ce qui amène à la construction automatique d'un site basique avec l'ajout de nombreux fichiers (merci Next.Js).
 
-Emma part faire une pause café et Eric trouve la bonne idée de **supprimer** certains fichiers du projet local d'Emma, dont le fichier "**.gitignore**".
+Emma part en pause café et Eric a la "bonne idée" de **supprimer** certains fichiers du projet local d'Emma, dont le fichier "**.gitignore**".
 
-Emma ne le remarque pas et souhaite sauvegarder une première fois son projet sur Github, elle utilise pour cela la commande suivante :
+Emma ne le remarque pas et souhaite sauvegarder une première fois son projet sur Github. Elle utilise la commande suivante :
 
 - `git add --all` (ajoute tous les fichiers dans le futurs **commit** afin de les amener sur le repo distant)
   
 !!! danger
-    Oh mon dieu ! Tout a été ajouté ! Tous les modules on été ajouté dans le `commit`, ceci est une très mauvaise chose.
+    Oh mon dieu ! Tous les modules on été ajouté dans le `commit` et ce n'est pas une bonne chose.
 
-    Si Emma push tout ça, çela causera de très gros problèmes de place. Les modules npm (installés automatiquement lors de l'installation de Next.Js) sont très nombreux et lourd. 
+    Si Emma push , çela causera de très gros problèmes de place. Les modules npm (installés automatiquement lors de l'installation de Next.Js) sont très nombreux et lourd. 
 
-Emma se rend compte que quelque chose ne vas pas, fait ses recherches et finit par trouver une documentation sur le fonctionnement du fichier [.gitignore](./fichier-gitignore.md). Pour pallier au problème, il faut recréer le fichier .gitignore et le remplir comme ci-dessous :
+Emma se rend compte que quelque chose ne vas pas, fait ses recherches et fini par trouver de la documentation sur le fonctionnement du fichier [.gitignore](./fichier-gitignore.md). Pour résoudre ce problème, il faut recréer le fichier .gitignore et le remplir comme ci-dessous :
 ```bash
 # dependencies
 /node_modules
@@ -103,7 +103,7 @@ yarn-error.log*
 next-env.d.ts
 ```
 
-Ce fichier permet de ne pas ajouter automatiquement des fichiers / dossiers que l'on ne voudrais pas lors de la commande `git add` (réalisez la commande `git add -h` pour afficher les différentes options de cette commande).
+Ce fichier permet de ne pas ajouter automatiquement des fichiers / dossiers que l'on ne voudrait pas lors de la commande `git add` (réalisez la commande `git add -h` pour afficher les différentes options de cette commande).
 
 Elle réalise enuite la commande `git status` pour vérifier si les modules sont toujours dans la **Staging Area**. La Staging Area est un endroit où se trouvent les fichiers qui vont être commit.
 
@@ -113,20 +113,20 @@ Elle réalise enuite la commande `git status` pour vérifier si les modules sont
     Pour résoudre ce propblème, elle doit réaliser la commande `git restore --staged .` afin enlever les fichiers nodes-modules du Staging Area.
 
 	!!! failure
-		Vu qu'Emma n'a pas encore 'commit' une seule fois, le pointeur HEAD (référence au dernier commit réalisé dans la branche courante) n'a pas été créé ce qui amène sur une erreur
+		Vu qu'Emma n'a pas encore 'commit', le pointeur HEAD (référence au dernier commit réalisé dans la branche courante) n'a pas été créé, ce qui crée une erreur : 
 
         ```
         fatal: Could not resolve HEAD
         ```
     
-    Emma a le bon réflexe. Elle va voir [la documentation de git](https://docs.gitlab.com/ee/topics/git/unstage.html) pour supprimer un fichier du stage, puis fait `git rm --cached ./node_modules`.
+    Emma a le bon réflexe. Elle va voir [la documentation de git](https://docs.gitlab.com/ee/topics/git/unstage.html) pour supprimer un fichier du stage, puis exécute la commande `git rm --cached ./node_modules`.
 
-    Comme `node_modules` est un dossier, elle a l'erreur `fatal: Not removing './node_modules' recursively without -r`. Elle ajoute donc l'argument `-r`
+    Comme `node_modules` est un dossier, l'erreur `fatal: Not removing './node_modules' recursively without -r` est reçue. Elle ajoute donc l'argument `-r`
 
     !!! success
         `git rm -r --cached ./node_modules`, tout va bien ! Les node_modules ne sont plus dans le stage.
 
-Désormais, Emma n'a plus de problèmes avec le `.gitignore` Emma peut donc essayer d'envoyer son travail sur Github à l'aide des commandes suivantes:
+Désormais, Emma n'a plus de problème avec le `.gitignore` Emma peut donc essayer d'envoyer son travail sur Github à l'aide des commandes suivantes:
 
   - `git add --all`
   - `git commit -m "premier commit"`
@@ -161,7 +161,7 @@ Pour se faire Eric doit cloner le repo d'Emma depuis Github.
 !!! success
     Cela permettra à Eric de travailler depuis son poste **en local** pour ajouter ses modifications et ensuite les **[commit](./listingcommand.md/#git-commit)**
 
-puis ajout de cette base dans le repo distant avec :
+puis ajouter cette base dans le repository distant avec :
 
 - `git add`
 
@@ -181,9 +181,9 @@ puis ajout de cette base dans le repo distant avec :
 
 ## Les Branches
 
-Eric veut maintenant créer un formulaire, il veut aller sur une nouvelle branche nommée `feature-form` pour le réaliser.
+Eric veut maintenant créer un formulaire, il va aller sur une nouvelle branche nommée `feature-form` pour le réaliser.
 
-Pour se déplacer sur une branche il utilise la commande `git checkout` suivis du nom de la branche:
+Pour se déplacer sur une branche il utilise la commande `git checkout` suivie du nom de la branche:
 
 - `git checkout feature-form`
 
@@ -196,13 +196,13 @@ Pour se déplacer sur une branche il utilise la commande `git checkout` suivis d
 
 Ce message nous dit que git n'a pas pu trouver de branche nommé `feature-form` dans le dépôt Git.
 
-Pour pallier à ce problème Eric ajoute un argument `-b` avant le nom de la branche.
+Pour résoudre ce problème Eric ajoute un argument `-b` avant le nom de la branche.
 
 - `git checkout -b feature-form`
 
-Cela va permettre de créer la branche puis de s'y déplacer dessus.
+Cela va permettre de créer la branche puis de s'y déplacer.
 
-Maintenant il veut vérifier qu'il ai bien une nouvelle branche `feature-form` qui a était ajouté et qu'il est bien sur cette branche, pour ce faire il utilise:
+Maintenant il veut vérifier qu'il ai bien une nouvelle branche `feature-form` qui a été ajouté et qu'il est bien sur cette branche, pour ce faire il utilise:
 
 - `git branch`
 
@@ -213,7 +213,7 @@ Maintenant il veut vérifier qu'il ai bien une nouvelle branche `feature-form` q
 
 ```
 
-Il y a bien 2 branches et l'astérix est positionner sur `feature-form` montrant que c'est la branche active
+Il y a bien deux branches et l'asterisque est positionné sur `feature-form` montrant que c'est la branche active.
 
 <!-- Pour créer une nouvelle branche il utilise la commande :
 
@@ -223,7 +223,7 @@ La commande `checkout` permet de se déplacer sur une branche et  -->
 
 ### CAS DE PROBLÈMES COURANTS
 
-"Je vois pas tes modifs" : Eric est pas sur la bonne branche, ou il a pas fetch
+"Je vois pas tes modifs" : Eric n'est soit pas sur la bonne branche, soit il n'a pas 'fetch'.
 
 Branche qui change de nom et crée un conflit :
 Merge la branche qui pose problème sur la bonne branche qui respecte la bonne convention de nommage. Supprimer la branche problématique
