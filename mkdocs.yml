@@ -1,4 +1,6 @@
 site_name: "Git 101"
+site_url: https://ub-mmi-but.github.io/git-101/
+repo_url: https://github.com/ub-mmi-but/git-101/
 theme:
   name: 'material'
   features:
