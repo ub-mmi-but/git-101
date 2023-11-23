@@ -243,3 +243,5 @@ Conflits de merge
 Erreur Permission Denied (Publickey)
 
 Un fichier de dépendances à été ajouté (git ignore)
+
+On a pull une branche qui avait été rebase. => `git config pull.ff only       # avance rapide seulement`
