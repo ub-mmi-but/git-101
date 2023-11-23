@@ -2,7 +2,7 @@ site_name: "Git 101"
 site_url: https://ub-mmi-but.github.io/git-101/
 repo_url: https://github.com/ub-mmi-but/git-101/
 theme:
-  name: 'material'
+  name: "material"
   features:
     - toc.integrate
     - navigation.tabs
@@ -14,12 +14,17 @@ theme:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - footnotes
   - pymdownx.keys
 
 extra_css:
   - stylesheets/title.css
+  - stylesheets/mermaid.css
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys
