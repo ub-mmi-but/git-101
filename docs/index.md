@@ -272,13 +272,13 @@ On a pull une branche qui avait été rebase. => `git config pull.ff only       
 
 ```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'base', 'themeVariables': {
-              'gitInv2': '#1167BD',
+              'gitInv3': '#B26EDF',
               'tagLabelFontSize': '15px',
               'git0': '#72BE49',
               'git1': '#B26EDF',
               'git2': '#1167BD',
-              'git3': '#1167BD',
-              'git4': '#F4D23E',
+              'git3': '#B26EDF',
+              'git4': '#1167BD',
               'git5': '#C62817',
               'git6': '#ff00ff',
               'git7': '#00ffff',
@@ -295,12 +295,14 @@ On a pull une branche qui avait été rebase. => `git config pull.ff only       
        } } }%%
 gitGraph
    commit id:"v0"
+   branch api
+   checkout api
+   commit id:"Create endpoint" type:REVERSE tag:"/!\ Danger commit API :  fichier avec le mot de passe BDD en clair ajouté au repo"
    branch feature-form
-   branch origin/api
    checkout feature-form
-   commit id:"api" type:REVERSE tag:"/!\ Danger commit API :  fichier avec le mot de passe BDD en clair ajouté au repo"
-   commit id:"feature_form"
+   commit id:"Create form"
    checkout main
+   branch origin/api
    checkout origin/api
-   commit id:"edited_api" type:HIGHLIGHT tag:"fichier api modifié"
+   commit id:"Create endpoint (fixed)" type:HIGHLIGHT tag:"fichier api modifié"
 ```
