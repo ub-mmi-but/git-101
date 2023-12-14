@@ -2,13 +2,9 @@
 
 ## Plan de l'histoire
 
-- Le projet d'Emma et Eric
-- Création d'un projet GitHub
-- Création d'un projet git local
 - Clone du projet par Eric
   - Il essaie de push des modifications sur 'main', mais sa tentativ est rejetée car Emma a push un deuxième commit depuis son clonage.
-  - Il fait crée branche.
-    - checkout, checkout -b, push, lien vers la doc Git Flow
+  push, lien vers la doc Git Flow
 - Form, API, mot de passe, réécriture, rebase onto
 
 ## **Installation d’un projet**
@@ -19,7 +15,7 @@ Afin de mener à bien ce projet et de ne pas répéter les erreurs de développe
 
 Ils vont utiliser  **[Github](./1.%20Introduction/github.md)** afin de pouvoir travailler à plusieurs sur un même projet et ainsi conserver une trace de tout les modifications ajoutées au futur nouveau site Web.
 
-### I) Création du repository sur Github
+## I) Création du repository sur Github
 
 Emma est chargée de créer l'environnement Github. Pour cela, voici comment elle va procéder :
 
@@ -31,7 +27,7 @@ Emma est chargée de créer l'environnement Github. Pour cela, voici comment ell
 !!! success
     Nous avons maintenant un repository sur Github. Github étant un [modèle décentralisé](./2.%20Notions%20de%20base/modeleDecentralise.md), nous avons besoin de créer un environnement de travail sur notre machine en local.
 
-### II) Création du repository en local
+## II) Création du repository en local
 
 Maintenant qu'Emma à créé le projet sur Github, elle doit maintenant créer le dossier qui acceuillera le projet sur sa machine, en local.
 
@@ -150,7 +146,7 @@ Comme indiqué dans le message d'erreur un simple **push** pour un premier commi
 
 Cela va permettre de créer la branche `main` sur le dépot distant puis faire un `git push` dessus.
 
-### III) Arrivé d'Eric sur le projet
+## III) Arrivé d'un tier sur le projet
 
 
 
@@ -166,40 +162,22 @@ Cela va permettre de créer la branche `main` sur le dépot distant puis faire u
 
 Eric veut dorénavant rejoindre le projet sans devoir aller sur le poste d'Emma.
 
+### 1. Clone du repo distant
+
 Pour se faire Eric doit cloner le repo d'Emma depuis Github.
 
-`git clone lien-ssh-du-repo` : voir documentation sur [SSH](./2.%20Notions%20de%20base/SSH.md)
+`git clone lien-ssh-du-repo` : voir la documentation sur [SSH](./2.%20Notions%20de%20base/SSH.md)
 
 !!! success
-    Cela permettra à Eric de travailler depuis son poste **en local** pour ajouter ses modifications et ensuite les **[commit](./listingcommand.md/#git-commit)**
+    Cela permettra à Eric de travailler depuis son poste **en local** pour ajouter ses modifications et ensuite les **[commit](././2.%20Notions%20de%20base/listingcommand.md#git-commit)**
 
-puis ajouter cette base dans le repository distant avec :
+Ensuite, il doit créer une branche pour éviter de futurs conflits, pour plus d'informations : [Gestion des branches](./2.%20Notions%20de%20base/Gestion_Creation_Branche.md)
 
-- `git add`
+### 2. Création de sa branche
 
-- `git status`
+Eric veut maintenant créer un formulaire, il va pour cela, créer une nouvelle branche nommée `feature-form`.
 
-- `git commit -m "create environment for the project"`
-
-- `git status`
-
-- `git push origin main`
-
--> vérification sur Github -> création d’une branch feature/layout dans laquelle on créer une base de projet avec un layout puis :
-
-- `git add`
-- `git commit -m "create base layout for the project"`
-- `git push`
-
-
-
-
-
-Eric veut maintenant créer un formulaire, il va aller sur une nouvelle branche nommée `feature-form` pour le réaliser.
-
-Pour se déplacer sur une branche il utilise la commande `git checkout` suivie du nom de la branche:
-
-- `git checkout feature-form`
+Pour se déplacer sur sa branche, il utilise la commande : `git checkout feature-form`
 
 !!! failure
     Une erreur apparaît dans le terminal :
@@ -210,32 +188,28 @@ Pour se déplacer sur une branche il utilise la commande `git checkout` suivie d
 
 Ce message nous dit que git n'a pas pu trouver de branche nommé `feature-form` dans le dépôt Git.
 
-Pour résoudre ce problème Eric ajoute un argument `-b` avant le nom de la branche.
-
-- `git checkout -b feature-form`
+Pour résoudre ce problème Eric ajoute l'argument `-b` avant le nom de la branche : `git checkout -b feature-form`
 
 Cela va permettre de créer la branche puis de s'y déplacer.
 
-Maintenant il veut vérifier qu'il ai bien une nouvelle branche `feature-form` qui a été ajouté et qu'il est bien sur cette branche, pour ce faire il utilise:
-
-- `git branch`
+Maintenant il veut vérifier qu'il ai bien une nouvelle branche `feature-form` qui a été ajouté et qu'il est bien sur cette branche, pour ce faire il utilise : `git branch`
 
 ```bash
-
   main
 * feature-form
-
 ```
 
 Il y a bien deux branches et l'asterisque est positionné sur `feature-form` montrant que c'est la branche active.
 
-Eric développe donc un formulaire. il veut désormais push sa modification sur la branche feature-form distante.
+### 3. Construction du formulaire
+
+Eric développe donc un formulaire. Il veut désormais push sa modification sur la branche `feature-form` distante.
 
 Pour ce faire Eric va exécuter les commandes suivantes:
 
-- `git add`
+- `git add --all`
 
-- `git commit -m "feat: form"`
+- `git commit -m "feature : create the front of the form"`
 
 - `git push`
 
@@ -252,50 +226,18 @@ Pour ce faire Eric va exécuter les commandes suivantes:
     upstream, see 'push.autoSetupRemote' in 'git help config'.
     ```
 
-Effectué cette commande pour créer sur le dépot distant la branche `feature-form` et pousser les modifications sur celle ci.
+Effectué cette commande pour créer sur le dépot distant la branche `feature-form` et pousser les modifications sur celle ci : `git push --set-upstream origin feature-form`
 
-- `git push --set-upstream origin feature-form`
+Entre temps Emma a créer sa propre branche basé sur `main` qui s'appelle `feature-form-api` (code de l'api pour le formulaire). Elle a push les modifications sur le dépôt distant.
+Eric pour effectuer des tests de son formulaire, veut récupérer le code de la branche d'Emma. Pour ce faire, il va exécuter cette commande depuis sa propre branche : `git rebase feature-form-api`
 
-Entre temps Emma a créer sa propre branche basé sur `main` qui s'appelle `feature-form-api` elle a push les modifications sur le dépôt distant.
+Eric test le bon fonctionnement du formulaire et effectue les modifications nécessaires, puis push sur sa branche distante.
 
-Eric pour effectuer des tests de son formulaire veut récupérer la branche d'Emma pour ce faire il va exécuter cette commande depuis sa branche à lui:
-
-- `git rebase feature-form-api`
-
-Eric fait des test qui valide le bon fonctionnement, il a effectuer les modifications nécessaire et a push sur sa branche.
-
-Mais entre temps Emma a réalisé qu'elle avais mis en clair le mot de passe de la bdd dans un de ces fichiers qui a été commit et poussé sur le dépôt distant.
+Cependant, Emma a entre temps réalisé qu'elle avais mis en clair le mot de passe de la **BDD** dans un de ces fichiers qui a été commit et poussé sur le dépôt distant.
 
 
 
 
-
-
-
-
-
-- Le projet d'Emma et Eric
-- Création d'un projet GitHub
-- Création d'un projet git local
-- Clone du projet par Eric
-  - Il essaie de push des modifications sur 'main', mais sa tentativ est rejetée car Emma a push un deuxième commit depuis son clonage.
-  - Il fait crée branche.
-    - checkout, checkout -b, push, lien vers la doc Git Flow
-- Form, API, mot de passe, réécriture, rebase onto
-
-
-
-
-
-
-
-
-
-<!-- Pour créer une nouvelle branche il utilise la commande :
-
-`git checkout -b feature`
-
-La commande `checkout` permet de se déplacer sur une branche et  -->
 
 ### CAS DE PROBLÈMES COURANTS
 
