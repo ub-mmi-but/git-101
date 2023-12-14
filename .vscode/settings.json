@@ -1,4 +1,7 @@
 {"markdown.copyFiles.destination": {
     "**/*": "/assets/"
-  }
+  },
+  "files.exclude": {
+    "**/.git": false
+}
 }
