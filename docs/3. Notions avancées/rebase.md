@@ -6,7 +6,44 @@ La commande `git rebase` est utilisée pour réorganiser l'historique des commit
 
 Le rebasage _(`git rebase`)_ fonctionne en prenant une branche (_feature_) et en la basant sur une autre branche (généralement _main_). Cela signifie que les commits de la branche de _feature_ sont replacés sur le dessus de la branche _main_, un par un.
 
-![Alt text](../assets/rebase_img.png)
+```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'base', 'themeVariables': {
+              'tagLabelFontSize': '15px',
+              'git0': '#72BE49',
+              'git1': '#B26EDF',
+              'git2': '#B26EDF',
+              'git3': '#B26EDF',
+              'git4': '#F4D23E',
+              'git5': '#C62817',
+              'git6': '#ff00ff',
+              'git7': '#00ffff',
+              'gitBranchLabel0': '#ffffff',
+              'gitBranchLabel1': '#ffffff',
+              'gitBranchLabel2': '#ffffff',
+              'gitBranchLabel3': '#ffffff',
+              'gitBranchLabel4': '#ffffff',
+              'gitBranchLabel5': '#ffffff',
+              'gitBranchLabel6': '#ffffff',
+              'gitBranchLabel7': '#ffffff',
+              'gitBranchLabel8': '#ffffff',
+              'gitBranchLabel9': '#ffffff'
+       } } }%%
+gitGraph
+   commit id:"v0"
+   branch feature
+   commit id:"feature_v1"
+   commit id:"feature_v2"
+   checkout main
+   commit id:"main_v1"
+   commit id:"main_v2"
+   branch feature_rebased
+   checkout feature_rebased
+   commit id:"feature_v1'" type:REVERSE
+   commit id:"feature_v2'" tag:"branch feature rebase sur main" type:REVERSE
+
+
+```
+
 
 ## Cas d'utilisation
 
@@ -77,8 +114,14 @@ git rebase --continue
 
 > - Supposons que vous ayez une branche avec les commits suivants :
 
-```bash
-A --> B --> C --> D --> E --> F --> G
+```mermaid
+flowchart LR
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
 ```
 
 > - Executer la commande suivante dans la branche _feature_ :
@@ -127,8 +170,12 @@ git rebase --continue
 
 > - Au final, on obtient :
 
-```bash
-A -- D -- DE - F (commit modifié) -- G
+```mermaid
+flowchart LR
+    A --- D
+    D --- DE
+    DE --- F(F: commit modifié)
+    F(F: commit modifié) --- G
 ```
 
 ---
@@ -140,7 +187,7 @@ A -- D -- DE - F (commit modifié) -- G
 - Effectuer un rebase plus puissant qui transmet des réfs (points de rebase)
 
 ```bash
-    git rebase --onto <newbase> <oldbase>
+    git rebase <base_To_Rebase> --onto  <originCommit_To_Start_Rebase>
 ```
 
 > **_Exemple_**
