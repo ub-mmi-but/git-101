@@ -152,6 +152,18 @@ Cela va permettre de créer la branche `main` sur le dépot distant puis faire u
 
 ### III) Arrivé d'Eric sur le projet
 
+
+
+
+
+
+
+
+
+
+
+
+
 Eric veut dorénavant rejoindre le projet sans devoir aller sur le poste d'Emma.
 
 Pour se faire Eric doit cloner le repo d'Emma depuis Github.
@@ -179,7 +191,9 @@ puis ajouter cette base dans le repository distant avec :
 - `git commit -m "create base layout for the project"`
 - `git push`
 
-## Les Branches
+
+
+
 
 Eric veut maintenant créer un formulaire, il va aller sur une nouvelle branche nommée `feature-form` pour le réaliser.
 
@@ -214,6 +228,68 @@ Maintenant il veut vérifier qu'il ai bien une nouvelle branche `feature-form` q
 ```
 
 Il y a bien deux branches et l'asterisque est positionné sur `feature-form` montrant que c'est la branche active.
+
+Eric développe donc un formulaire. il veut désormais push sa modification sur la branche feature-form distante.
+
+Pour ce faire Eric va exécuter les commandes suivantes:
+
+- `git add`
+
+- `git commit -m "feat: form"`
+
+- `git push`
+
+!!! failure
+    Une erreur apparaît dans le terminal :
+
+    ```bash
+    fatal: The current branch main has no upstream branch.
+
+    To push the current branch and set the remote as upstream, use    
+    git push --set-upstream origin feature-form    
+
+    To have this happen automatically for branches without a tracking
+    upstream, see 'push.autoSetupRemote' in 'git help config'.
+    ```
+
+Effectué cette commande pour créer sur le dépot distant la branche `feature-form` et pousser les modifications sur celle ci.
+
+- `git push --set-upstream origin feature-form`
+
+Entre temps Emma a créer sa propre branche basé sur `main` qui s'appelle `feature-form-api` elle a push les modifications sur le dépôt distant.
+
+Eric pour effectuer des tests de son formulaire veut récupérer la branche d'Emma pour ce faire il va exécuter cette commande depuis sa branche à lui:
+
+- `git rebase feature-form-api`
+
+Eric fait des test qui valide le bon fonctionnement, il a effectuer les modifications nécessaire et a push sur sa branche.
+
+Mais entre temps Emma a réalisé qu'elle avais mis en clair le mot de passe de la bdd dans un de ces fichiers qui a été commit et poussé sur le dépôt distant.
+
+
+
+
+
+
+
+
+
+- Le projet d'Emma et Eric
+- Création d'un projet GitHub
+- Création d'un projet git local
+- Clone du projet par Eric
+  - Il essaie de push des modifications sur 'main', mais sa tentativ est rejetée car Emma a push un deuxième commit depuis son clonage.
+  - Il fait crée branche.
+    - checkout, checkout -b, push, lien vers la doc Git Flow
+- Form, API, mot de passe, réécriture, rebase onto
+
+
+
+
+
+
+
+
 
 <!-- Pour créer une nouvelle branche il utilise la commande :
 
