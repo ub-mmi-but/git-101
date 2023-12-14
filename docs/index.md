@@ -144,19 +144,19 @@ Désormais, Emma n'a plus de problème avec le `.gitignore` Emma peut donc essay
     To have this happen automatically for branches without a tracking
     upstream, see 'push.autoSetupRemote' in 'git help config'.
     ```
-Comme indiqué dans le message d'erreur un simple **push** ne suffit pas il faut donc utiliser:
+Comme indiqué dans le message d'erreur un simple **push** pour un premier commit d'une branche ne suffit pas, il faut donc utiliser:
 
     `git push --set-upstream origin main`
 
 Cela va permettre de créer la branche `main` sur le dépot distant puis faire un `git push` dessus.
 
-## III) Arrivé d'Eric sur le projet
+### III) Arrivé d'Eric sur le projet
 
 Eric veut dorénavant rejoindre le projet sans devoir aller sur le poste d'Emma.
 
 Pour se faire Eric doit cloner le repo d'Emma depuis Github.
 
-`git clone lien-ssh-du-repo`
+`git clone lien-ssh-du-repo` : voir documentation sur [SSH](./2.%20Notions%20de%20base/SSH.md)
 
 !!! success
     Cela permettra à Eric de travailler depuis son poste **en local** pour ajouter ses modifications et ensuite les **[commit](./listingcommand.md/#git-commit)**
@@ -247,3 +247,42 @@ Un fichier de dépendances à été ajouté (git ignore)
 Mon push a été rejeté parce que Emma a déjà push un commit avant moi, sur la même branche => `git pull --rebase`
 
 On a pull une branche qui avait été rebase. => `git config pull.ff only       # avance rapide seulement`
+
+
+
+
+
+```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'base', 'themeVariables': {
+              'gitInv2': '#1167BD',
+              'tagLabelFontSize': '15px',
+              'git0': '#72BE49',
+              'git1': '#B26EDF',
+              'git2': '#1167BD',
+              'git3': '#1167BD',
+              'git4': '#F4D23E',
+              'git5': '#C62817',
+              'git6': '#ff00ff',
+              'git7': '#00ffff',
+              'gitBranchLabel0': '#ffffff',
+              'gitBranchLabel1': '#ffffff',
+              'gitBranchLabel2': '#ffffff',
+              'gitBranchLabel3': '#ffffff',
+              'gitBranchLabel4': '#ffffff',
+              'gitBranchLabel5': '#ffffff',
+              'gitBranchLabel6': '#ffffff',
+              'gitBranchLabel7': '#ffffff',
+              'gitBranchLabel8': '#ffffff',
+              'gitBranchLabel9': '#ffffff'
+       } } }%%
+gitGraph
+   commit id:"v0"
+   branch feature-form
+   branch origin/api
+   checkout feature-form
+   commit id:"api" type:REVERSE tag:"/!\ Danger commit API :  fichier avec le mot de passe BDD en clair ajouté au repo"
+   commit id:"feature_form"
+   checkout main
+   checkout origin/api
+   commit id:"edited_api" type:HIGHLIGHT tag:"fichier api modifié"
+```
