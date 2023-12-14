@@ -2,7 +2,7 @@
 
 Pour comprendre pleinement la dynamique de Git, il est essentiel de saisir comment working directory, le stage, le repo et HEAD sont intrinsèquement liés. Imaginez-les comme les pièces interconnectées d'une machine puissante de gestion de versions.
 
-![Schema liant le working directory avec le stage et le repo](/assets/image.png)
+![Schema liant le working directory avec le stage et le repo](../assets/image.png)
 
 ## Qu'est ce que la Working Directory ?
 

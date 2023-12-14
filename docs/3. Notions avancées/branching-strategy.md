@@ -6,7 +6,7 @@ L'idée principale du branching strategy est de diviser le travail entre plusieu
 
 ## La stratégie *Git flow*
 
-![Git flow](/assets/gitFlow.png)
+![Git flow](../assets/gitFlow.png)
 
 
 La stratégie *git flow* sépare le travail en 5 branches :
@@ -21,7 +21,7 @@ Cette méthode permet un développement plus intuitif et simple d'oganisation. O
 
 ## La stratégie *Gitlab flow*
 
-![Gitlab flow](/assets/GitLab_flow.png)
+![Gitlab flow](../assets/GitLab_flow.png)
 
 *Gitlab flow* est totalement différent, il contient les branches suivantes :
 
