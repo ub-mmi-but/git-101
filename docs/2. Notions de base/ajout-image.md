@@ -45,7 +45,7 @@ Dans l'exemple suivant, nous définirons le chemin du dossier dans lesquelles le
 
 Étape 1 : Aller dans les paramètres de VS Code ++ctrl+plus++
 
-![Alt text](/assets/step1-ajout-image.png)
+![Alt text](../assets/step1-ajout-image.png)
 
 Étape 2 : Rechercher le terme `Markdown`
 
