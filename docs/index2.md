@@ -17,7 +17,7 @@ Le département Informatique a pour projet de développer le nouveau site du BUT
 
 Afin de mener à bien ce projet et de ne pas répéter les erreurs de développement des précédentes équipes, Emma et Eric, étudiant en BUT Informatique en charge du projet, vont créer un nouvel environnement de travail.
 
-Ils vont utiliser  **[Github](./github.md)** afin de pouvoir travailler à plusieurs sur un même projet et ainsi conserver une trace de tout les modifications ajoutées au futur nouveau site Web.
+Ils vont utiliser  **[Github](./1.%20Introduction/github.md)** afin de pouvoir travailler à plusieurs sur un même projet et ainsi conserver une trace de tout les modifications ajoutées au futur nouveau site Web.
 
 ### I) Création du repository sur Github
 
@@ -29,7 +29,7 @@ Emma est chargée de créer l'environnement Github. Pour cela, voici comment ell
 4. Cliquer sur "Create repository"
 
 !!! success
-    Nous avons maintenant un repository sur Github. Github étant un [modèle décentralisé](./modeleDecentralise.md), nous avons besoin de créer un environnement de travail sur notre machine en local.
+    Nous avons maintenant un repository sur Github. Github étant un [modèle décentralisé](./2.%20Notions%20de%20base/modeleDecentralise.md), nous avons besoin de créer un environnement de travail sur notre machine en local.
 
 ### II) Création du repository en local
 
@@ -66,7 +66,7 @@ Emma ne le remarque pas et souhaite sauvegarder une première fois son projet su
 
     Si Emma push , çela causera de très gros problèmes de place. Les modules npm (installés automatiquement lors de l'installation de Next.Js) sont très nombreux et lourd. 
 
-Emma se rend compte que quelque chose ne vas pas, fait ses recherches et fini par trouver de la documentation sur le fonctionnement du fichier [.gitignore](./fichier-gitignore.md). Pour résoudre ce problème, il faut recréer le fichier .gitignore et le remplir comme ci-dessous :
+Emma se rend compte que quelque chose ne vas pas, fait ses recherches et fini par trouver de la documentation sur le fonctionnement du fichier [.gitignore](./2.%20Notions%20de%20base/fichier-gitignore.md). Pour résoudre ce problème, il faut recréer le fichier .gitignore et le remplir comme ci-dessous :
 ```bash
 # dependencies
 /node_modules
