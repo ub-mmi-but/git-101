@@ -4,6 +4,7 @@ Le branching strategy est une méthode d'organisation, comment les branches sont
 
 L'idée principale du branching strategy est de diviser le travail entre plusieurs branches, cela permet un développement plus facile sans conflict entre le travail de chacun, une bonne branching strategy permet une meilleur productivité au sein d'une équipe.
 
+
 ## La stratégie _Git flow_
 
 <!--![Git flow](/assets/gitFlow.png) -->
@@ -71,6 +72,7 @@ gitGraph
 
 La stratégie _git flow_ sépare le travail en 5 branches :
 
+
 - **Main** pour les versions stables.
 - **Develop** pour le développement continue.
 - Feature, chaque fonctionnalité a implémenter a sa propre branche
@@ -102,6 +104,7 @@ gitGraph
 
 
 ```
+
 
 _Gitlab flow_ est totalement différent, il contient les branches suivantes :
 

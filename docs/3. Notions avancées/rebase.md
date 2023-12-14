@@ -44,6 +44,7 @@ gitGraph
 
 ```
 
+
 ## Cas d'utilisation
 
 1. Imaginons que vous êtes sur une branche _feature_, vous travaillez sur votre branche de votre côté.

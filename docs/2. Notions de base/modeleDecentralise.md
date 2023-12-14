@@ -4,6 +4,7 @@ Il existe deux modèles, le centralisé et le décentralisé.
 
 - Centralisé : Centralisation du code source du projet, les utilisateurs doivent se connecter au serveur pour travailler dessus. Exemple : SVN
 
+
 ```mermaid
 
 flowchart TD;
@@ -21,7 +22,9 @@ flowchart TD;
     class E checkout
 ```
 
+
 - Décentraliser : Le code source est hébergé sur un serveur distant, les utilisateurs sont cette fois invité à télécharger les fichiers pour pouvoir travailler de leurs cotés. Exemple : GitHub
+
 
 ```mermaid
 ---
