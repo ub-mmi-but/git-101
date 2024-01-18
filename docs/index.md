@@ -3,7 +3,7 @@
 ## Plan de l'histoire
 
 - Clone du projet par Eric
-  - Il essaie de push des modifications sur 'main', mais sa tentativ est rejetée car Emma a push un deuxième commit depuis son clonage.
+  - Il essaie de push des modifications sur 'main', mais sa tentative est rejetée car Emma a push un deuxième commit depuis son clonage.
   push, lien vers la doc Git Flow
 - Form, API, mot de passe, réécriture, rebase onto
 
