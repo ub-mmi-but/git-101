@@ -1,10 +1,5 @@
 # Getting started with Git
 
-## Plan de l'histoire
-
-- Clone du projet par Eric
-  - Il essaie de push des modifications sur 'main', mais sa tentative est rejetée car Emma a push un deuxième commit depuis son clonage.
-  push, lien vers la doc Git Flow
 - Form, API, mot de passe, réécriture, rebase onto
 
 ## **Installation d’un projet**
@@ -148,18 +143,6 @@ Cela va permettre de créer la branche `main` sur le dépot distant puis faire u
 
 ## III) Arrivé d'un tier sur le projet
 
-
-
-
-
-
-
-
-
-
-
-
-
 Eric veut dorénavant rejoindre le projet sans devoir aller sur le poste d'Emma.
 
 ### 1. Clone du repo distant
@@ -226,50 +209,27 @@ Pour ce faire Eric va exécuter les commandes suivantes:
     upstream, see 'push.autoSetupRemote' in 'git help config'.
     ```
 
-Effectué cette commande pour créer sur le dépot distant la branche `feature-form` et pousser les modifications sur celle ci : `git push --set-upstream origin feature-form`
+Effectué la commande `git push --set-upstream origin feature-form` pour créer sur le dépot distant la branche `feature-form` et pousser les modifications sur celle ci. 
 
 Entre temps Emma a créer sa propre branche basé sur `main` qui s'appelle `feature-form-api` (code de l'api pour le formulaire). Elle a push les modifications sur le dépôt distant.
-Eric pour effectuer des tests de son formulaire, veut récupérer le code de la branche d'Emma. Pour ce faire, il va exécuter cette commande depuis sa propre branche : `git rebase feature-form-api`
+Eric pour effectuer des tests de son formulaire, veut récupérer le code de la branche d'Emma. Pour ce faire, il va exécuter la commande `git rebase feature-form-api` depuis sa propre branche. 
 
 Eric test le bon fonctionnement du formulaire et effectue les modifications nécessaires, puis push sur sa branche distante.
 
-Cependant, Emma a entre temps réalisé qu'elle avais mis en clair le mot de passe de la **BDD** dans un de ces fichiers qui a été commit et poussé sur le dépôt distant.
+!!! danger
+    Emma a réalisé qu'elle avais mis en clair le mot de passe de la **BDD** dans un des fichiers qui a été commit et poussé sur le dépôt distant.
 
+!!! warning
+    ```
+    // prisma/schema.prisma
+    
+    datasource db {
+        provider = "postgresql"
+        url = "postgresql://johndoe:lemotdepasse@localhost:5432/mydb?schema=public"
+    }
+    ```
 
-
-
-
-### CAS DE PROBLÈMES COURANTS
-
-"Je vois pas tes modifs" : Eric n'est soit pas sur la bonne branche, soit il n'a pas 'fetch'.
-
-Branche qui change de nom et crée un conflit :
-Merge la branche qui pose problème sur la bonne branche qui respecte la bonne convention de nommage. Supprimer la branche problématique
-Puis commit et push
-
-Problème pas possible de push car push par dessus notre travail en cours :
-Rebase
-
-Récupérer des fichiers accidentellement supprimés
-
-Supprimer une branche trop tôt
-
-Commit du code non terminés
-
-Conflits de merge
-
-Erreur Permission Denied (Publickey)
-
-Un fichier de dépendances à été ajouté (git ignore)
-
-Mon push a été rejeté parce que Emma a déjà push un commit avant moi, sur la même branche => `git pull --rebase`
-
-On a pull une branche qui avait été rebase. => `git config pull.ff only       # avance rapide seulement`
-
-
-
-
-
+Voici un graphique représentant la situation actuelle :
 ```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'base', 'themeVariables': {
               'gitInv3': '#B26EDF',
@@ -294,10 +254,7 @@ On a pull une branche qui avait été rebase. => `git config pull.ff only       
               'gitBranchLabel9': '#ffffff'
        } } }%%
 gitGraph
-   commit id:"v0"
-   branch api
-   checkout api
-   commit id:"Create endpoint" type:REVERSE tag:"/!\ Danger commit API :  fichier avec le mot de passe BDD en clair ajouté au repo"
+   commit id:" "
    branch feature-form
    checkout feature-form
    commit id:"Create form"
@@ -306,3 +263,121 @@ gitGraph
    checkout origin/api
    commit id:"Create endpoint (fixed)" type:HIGHLIGHT tag:"fichier api modifié"
 ```
+
+Puisqu'Emma à pousser des données susceptibles sur Github, il est nécessaire de réécrire l'historique git (local et distant) et de déplacer le mot de passe de la BDD dans le fichier **`.env`**. Pour ce faire, elle doit réaliser les commandes dans l'ordre suivant :
+
+Elle doit tout d'abord enlever le mot de passe du fichier `prisma/schema.prisma`, puis le placer dans le fichier `.env` puisque ce dernier est ignoré lors de l'envoie sur le repository distant.
+
+!!! success
+    ```
+    // Fichier prisma/schema.prisma
+
+    datasource db {
+        provider = "postgresql"
+        url = env("DATABASE_URL")
+    }
+    ```
+    ```
+    // Fichier .env
+
+    DATABASE_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public"
+    ```
+
+Emma va réaliser un nouveau commit de ses fichiers sans le mot de passe :
+
+- `git add --all`
+
+- `git commit -m 'delete sensitive data from schema.prsima file'`
+
+- `git push`
+
+Emma va ensuite vérifier son historique avec `git log --oneline`.
+
+```bash
+169caa6 (HEAD -> feature-api, origin/feature-api) delete sensitive data from schema.prsima file
+e6ded27 Form API
+
+// Ici, le sha du commit qui contient le mot de passe est 'e6ded27'
+```
+
+Emma va vérifier le commit `e6ded27` avec `git show e6ded27`.
+
+Elle se rend compte que le mot de passe est toujours accessible dans le fichier `prisma/schema.prisma`.
+
+Il faut réécrire le commit en question en amendant celui-ci pour supprimer toutes les trâces du mot de passe.
+
+Pour ce faire, il faut d'abord **reset** sur le commit contenant le mot de passe :
+```bash
+git reset HEAD~1
+
+Unstaged changes after reset:
+M       schema.prisma
+```
+
+Ensuite, il faut **amender** un commit :
+```bash
+git add --all
+
+git commit --amend -m 'Form API modified'
+/**
+[feature-api 5bbd227] Form API modified
+Date: Thu Jan 18 08:53:36 2024 +0100
+1 file changed, 1 insertion(+), 1 deletion(-)
+*/
+
+git push --force
+/**
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 297 bytes | 297.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Emma/Info-website.git
+ + 169caa6...5bbd227 feature-api -> feature-api (forced update)
+*/
+```
+
+A ce moment, le commit contenant le mot de passe à bien dû être complètement supprimer de l'historique. Pour le vérifier :
+```bash
+git log --oneline
+5bbd227 (HEAD -> feature-api, origin/feature-api) Form API modified
+8c08eca feature:Create API feature
+e19ceb6 (origin/main, origin/HEAD, main) first commit
+079a6f8 First commit
+```
+
+!!! success
+    Il n'y a plus aucune trâce du commit `e6ded27` contenant le mot de passe.
+    Il a bien été remplacé par le nouveau commit ne contenant pas le mot de passe.
+
+
+
+
+
+### CAS DE PROBLÈMES COURANTS
+
+"Je vois pas tes modifs" : Eric n'est soit pas sur la bonne branche, soit il n'a pas 'fetch'.
+
+Branche qui change de nom et crée un conflit :
+Merge la branche qui pose problème sur la bonne branche qui respecte la bonne convention de nommage. Supprimer la branche problématique
+Puis commit et push
+
+Récupérer des fichiers accidentellement supprimés
+
+Supprimer une branche trop tôt
+
+Commit du code non terminés
+
+Conflits de merge
+
+Erreur Permission Denied (Publickey)
+
+On a pull une branche qui avait été rebase. => `git config pull.ff only       # avance rapide seulement`
+
+
+
+
+
+
