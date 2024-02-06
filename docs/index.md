@@ -1,7 +1,5 @@
 # Getting started with Git
 
-- Form, API, mot de passe, réécriture, rebase onto
-
 ## **Installation d’un projet**
 
 Le département Informatique a pour projet de développer le nouveau site du BUT Informatique.
