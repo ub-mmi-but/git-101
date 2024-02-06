@@ -21,7 +21,7 @@ Pour obtenir un rendu graphique de toutes les branches du projet, utilisez la co
 |`git log`|La commande par défaut liste tous les commits dans l’ordre inverse|
 |---|---|
 |`git log --graph --oneline`|Liste les modifications sous forme graphique de la branche|
-|`git log --graph --oneline --all`|Liste les modifications sous forme graphique de toutes les branches du repository|
+|`git log --graph --oneline --decorate --all`|Liste les modifications sous forme graphique de toutes les branches du repository|
 |`git log -p`|Affiche le contexte des modifications|
 |`git log --stat`|Affiche les statistiques de modifications avec une liste claire|
 |`git log --oneline`|Regroupe chaque commit sur une ligne pour un meilleur aperçu|

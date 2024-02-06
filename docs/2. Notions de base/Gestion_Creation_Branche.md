@@ -91,6 +91,10 @@ Pour apporter la modification au serveur distant :
 $ git push --set-upstream origin nom-de-branche-corrigé
 ```
 
+Pour tout voir
+```
+git branch -a
+```
 -------------------------------
 
 Vous avez dorénavant toutes les clés en main pour créer supprimer et gérer les branches !
