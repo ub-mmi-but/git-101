@@ -1,0 +1,16 @@
+#!/bin/bash
+
+commit_message_file=$1
+commit_message=$(cat "$commit_message_file")
+
+# Pattern pour la Convention de Commit Conventional
+commit_pattern="feat|fix|refactor|docs|style|test|chore\(\d\d\):\s .+"
+
+# Vérification de la conformité
+if [[ ! $commit_message =~ $commit_pattern ]]; then
+    echo "Erreur : Le message de commit n'est pas conforme à la convention."
+    echo "Exemple de message conforme : 'feat(num issue): ajoute une nouvelle fonctionnalité'"
+    exit 1
+fi
+
+exit 0
