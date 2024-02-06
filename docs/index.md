@@ -354,11 +354,7 @@ e19ceb6 (origin/main, origin/HEAD, main) first commit
 
 
 
-
-
-### CAS DE PROBLÈMES COURANTS
-
-"Je vois pas tes modifs" : Eric n'est soit pas sur la bonne branche, soit il n'a pas 'fetch'.
+<!-- ### CAS DE PROBLÈMES COURANTS
 
 Branche qui change de nom et crée un conflit :
 Merge la branche qui pose problème sur la bonne branche qui respecte la bonne convention de nommage. Supprimer la branche problématique
@@ -374,10 +370,4 @@ Conflits de merge
 
 Erreur Permission Denied (Publickey)
 
-On a pull une branche qui avait été rebase. => `git config pull.ff only       # avance rapide seulement`
-
-
-
-
-
-
+On a pull une branche qui avait été rebase. => `git config pull.ff only       # avance rapide seulement` -->
