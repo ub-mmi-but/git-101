@@ -1,4 +1,4 @@
-# Getting started with Git
+# Démarrer avec Git
 
 ## **Installation d’un projet**
 
