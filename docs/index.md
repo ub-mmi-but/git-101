@@ -51,7 +51,7 @@ Emma ne le remarque pas et souhaite sauvegarder une première fois son projet su
 - `git add --all` (ajoute tous les fichiers dans le futurs **commit** afin de les amener sur le repo distant)
   
 !!! danger
-    Oh mon dieu ! Tous les modules on été ajouté dans le `commit` et ce n'est pas une bonne chose.
+    Oh mon dieu ! Tous les modules on été ajouté dans le `commit` et ce n'est pas ce qu'on attend.
 
     Si Emma push , çela causera de très gros problèmes de place. Les modules npm (installés automatiquement lors de l'installation de Next.Js) sont très nombreux et lourd. 
 
