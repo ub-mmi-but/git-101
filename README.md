@@ -37,7 +37,7 @@ https://squidfunk.github.io/mkdocs-material/
 
 ## Footnotes
 
-Une footnote permet fournir des informations supplémentaires ou des références dans un document, qui seront situé en pied de page. Généralement utilisé pour ajouter des définitions, des sources et explications pertinentes au contenu principal.
+Une footnote permet de fournir des informations supplémentaires ou des références dans un document, qui seront situé en pied de page. Généralement utilisé pour ajouter des définitions, des sources et explications pertinentes au contenu principal.
 
 
 Pour faire une footnote il faut deux choses, une mentions de la footnote :
