@@ -55,7 +55,7 @@ Emma ne le remarque pas et souhaite sauvegarder une première fois son projet su
 
     Si Emma push , çela causera de très gros problèmes de place. Les modules npm (installés automatiquement lors de l'installation de Next.Js) sont très nombreux et lourd. 
 
-Emma se rend compte que quelque chose ne vas pas, fait ses recherches et fini par trouver de la documentation sur le fonctionnement du fichier [.gitignore](./2.%20Notions%20de%20base/fichier-gitignore.md). Pour résoudre ce problème, il faut recréer le fichier .gitignore et le remplir comme ci-dessous :
+Emma se rend compte que quelque chose ne va pas, fait ses recherches et fini par trouver de la documentation sur le fonctionnement du fichier [.gitignore](./2.%20Notions%20de%20base/fichier-gitignore.md). Pour résoudre ce problème, il faut recréer le fichier .gitignore et le remplir comme ci-dessous :
 ```bash
 # dépendances
 /node_modules
