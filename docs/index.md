@@ -94,7 +94,7 @@ next-env.d.ts
 
 Ce fichier permet de ne pas ajouter automatiquement des fichiers / dossiers que l'on ne voudrait pas lors de la commande `git add` (réalisez la commande `git add -h` pour afficher les différentes options de cette commande).
 
-Elle réalise enuite la commande `git status` pour vérifier si les modules sont toujours dans la **Staging Area**. La Staging Area est un endroit où se trouvent les fichiers qui vont être commit.
+Elle réalise ensuite la commande `git status` pour vérifier si les modules sont toujours dans la **Staging Area**. La Staging Area est un endroit où se trouvent les fichiers qui vont être commit.
 
 !!! warning
     Les modules sont toujours prêt à être commit puisqu'ils sont toujours dans le Staging Area.
