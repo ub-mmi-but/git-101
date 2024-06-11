@@ -96,3 +96,11 @@ La suppression d'un volume supprime le volume et toutes ses données.
 Pour supprimer un volume, passez la souris sur le volume, puis sélectionnez l' icône **Supprimer**. Vous pouvez également sélectionner le volume dans la liste, puis sélectionner le bouton **Supprimer**.
 
 Plus d'informations sur : <https://docs.docker.com>
+
+## Conclusion
+
+Docker est un outil puissant qui permet de créer, exécuter et gérer des conteneurs sur nos machines. Avec Docker, nous pouvons développer, tester et déployer des applications plus rapidement et plus facilement.
+
+L'installation de Docker est relativement simple, que ce soit sous Windows, Linux ou macOS. Une fois installé, nous pouvons utiliser les images Docker pour créer des conteneurs légers et isolés qui encapsulent nos applications et leurs dépendances. Les volumes Docker permettent de persister les données des conteneurs.
+
+Docker offre de nombreux avantages comme la portabilité, l'isolation, l'évolutivité et la cohérence entre les environnements. C'est un outil essentiel pour le développement d'applications modernes, les microservices, l'intégration et le déploiement continus, ainsi que pour moderniser les applications legacy.
