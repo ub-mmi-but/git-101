@@ -143,7 +143,7 @@ Cela va permettre de créer la branche `main` sur le dépot distant puis faire u
 
 Eric veut dorénavant rejoindre le projet sans devoir aller sur le poste d'Emma.
 
-### 1. Clone du repo distant
+### 1. Clone du repository(.abr:repo) distant
 
 Pour se faire Eric doit cloner le repo d'Emma depuis Github.
 
