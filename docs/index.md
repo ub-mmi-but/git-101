@@ -26,7 +26,7 @@ Maintenant qu'Emma à créé le projet sur Github, elle doit maintenant créer l
 
 1. Créer un dossier sur votre pc
 2. L’ouvrir via un environnement de développement intégré (IDE), ici nous utiliserons Visual Studio Code :
-    [<img src="/assets/vscode.png" width="20px"> Installer VS Code](https://code.visualstudio.com/download)
+    [Installer VS Code](https://code.visualstudio.com/download)
 3. Ouvrir un Terminal (menu en haut de page : Terminal -> New Terminal)
 4. Réaliser les commandes suivantes dans ce terminal pour mettre en lien votre dossier local avec votre repository Github :
     - `git init`
