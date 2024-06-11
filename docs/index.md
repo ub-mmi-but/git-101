@@ -350,7 +350,8 @@ e19ceb6 (origin/main, origin/HEAD, main) first commit
     Il n'y a plus aucune trâce du commit `e6ded27` contenant le mot de passe.
     Il a bien été remplacé par le nouveau commit ne contenant pas le mot de passe.
 
-
+### CONCLUSION
+Le département Informatique développe un nouveau site web pour le BUT Informatique en utilisant GitHub pour collaborer efficacement et suivre les modifications. Plusieurs problèmes, tels que la gestion des branches et la suppression de fichiers sensibles, sont résolus grâce à Git. Cette expérience souligne l'importance cruciale de Git pour la collaboration, la traçabilité des modifications et la gestion des erreurs dans le développement de projets.
 
 <!-- ### CAS DE PROBLÈMES COURANTS
 
