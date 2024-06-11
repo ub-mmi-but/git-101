@@ -209,7 +209,7 @@ Pour ce faire Eric va exécuter les commandes suivantes:
 
 Effectué la commande `git push --set-upstream origin feature-form` pour créer sur le dépot distant la branche `feature-form` et pousser les modifications sur celle ci. 
 
-Entre temps Emma a créer sa propre branche basé sur `main` qui s'appelle `feature-form-api` (code de l'api pour le formulaire). Elle a push les modifications sur le dépôt distant.
+Entre temps Emma a créé sa propre branche basé sur `main` qui s'appelle `feature-form-api` (code de l'api pour le formulaire). Elle a push les modifications sur le dépôt distant.
 Eric pour effectuer des tests de son formulaire, veut récupérer le code de la branche d'Emma. Pour ce faire, il va exécuter la commande `git rebase feature-form-api` depuis sa propre branche. 
 
 Eric test le bon fonctionnement du formulaire et effectue les modifications nécessaires, puis push sur sa branche distante.
@@ -222,8 +222,7 @@ Eric test le bon fonctionnement du formulaire et effectue les modifications néc
     // prisma/schema.prisma
     
     datasource db {
-        provider = "postgresql"
-        url = "postgresql://johndoe:lemotdepasse@localhost:5432/mydb?schema=public"
+        provider = "postgresql"         url = "postgresql://johndoe:lemotdepasse@localhost:5432/mydb?schema=public"
     }
     ```
 
