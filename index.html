@@ -1,0 +1,1547 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ub-mmi-but.github.io/git-101/">
+      
+      
+      
+        <link rel="next" href="1.%20Introduction/Installation-et-fonctionnement-docker/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+    
+    
+      
+        <title>Git 101</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/title.css">
+    
+      <link rel="stylesheet" href="stylesheets/mermaid.css">
+    
+      <link rel="stylesheet" href="pymdownx.critic">
+    
+      <link rel="stylesheet" href="pymdownx.caret">
+    
+      <link rel="stylesheet" href="pymdownx.keys">
+    
+      <link rel="stylesheet" href="pymdownx.mark">
+    
+      <link rel="stylesheet" href="pymdownx.tilde">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#demarrer-avec-git" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Git 101" class="md-header__button md-logo" aria-label="Git 101" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Git 101
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Démarrer avec Git
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ub-mmi-but/git-101/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+    
+  
+  Démarrer avec Git
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="1.%20Introduction/Installation-et-fonctionnement-docker/" class="md-tabs__link">
+          
+  
+  1. Introduction
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="2.%20Notions%20de%20base/6-git-stash-et-git-stash-pop/" class="md-tabs__link">
+          
+  
+  2. Notions de base
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="3.%20Notions%20avanc%C3%A9es/branching-strategy/" class="md-tabs__link">
+          
+  
+  3. Notions avancées
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="4.%20Conventions/convention-de-commit/" class="md-tabs__link">
+          
+  
+  4. Conventions
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Git 101" class="md-nav__button md-logo" aria-label="Git 101" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Git 101
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ub-mmi-but/git-101/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Démarrer avec Git
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Démarrer avec Git
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-dun-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation d’un projet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-creation-du-repository-sur-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      I) Création du repository sur Github
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-creation-du-repository-en-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      II) Création du repository en local
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-arrive-dun-tier-sur-le-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      III) Arrivé d'un tier sur le projet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="III) Arrivé d'un tier sur le projet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clone-du-repositoryabrrepo-distant" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Clone du repository(.abr:repo) distant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creation-de-sa-branche" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Création de sa branche
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-construction-du-formulaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Construction du formulaire
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            1. Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1.%20Introduction/Installation-et-fonctionnement-docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation et fonctionnement docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1.%20Introduction/expliquer-les-principes-de-working-directory-stage-repo-head/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working Directory, Stage, Repo, HEAD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1.%20Introduction/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qu'est ce que GIT ?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1.%20Introduction/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qu'est ce que Github ?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2. Notions de base
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            2. Notions de base
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2.%20Notions%20de%20base/6-git-stash-et-git-stash-pop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    La commande git stash
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2.%20Notions%20de%20base/Gestion_Creation_Branche/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Créer et gérer les branches
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2.%20Notions%20de%20base/Remote_repositories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les remote repositories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2.%20Notions%20de%20base/SSH/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2.%20Notions%20de%20base/ajout-image/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ajout d'images dans la documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2.%20Notions%20de%20base/comment-et-pourquoi-amender-un-commit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comment et pourquoi amender un commit ?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2.%20Notions%20de%20base/fichier-gitignore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    À quoi sert le fichier .gitignore ?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2.%20Notions%20de%20base/git-log-graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilisation de Git Log / Git Graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2.%20Notions%20de%20base/git-reset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git reset
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2.%20Notions%20de%20base/listingcommand/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commandes GIT - Base
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2.%20Notions%20de%20base/modeleDecentralise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modèle décentralisé
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2.%20Notions%20de%20base/raccourcis-Github-vers-les-issues-et-les-pulls-requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les raccourcis Github vers les issues et les pulls requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2.%20Notions%20de%20base/supprimer-branches-inutiles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comment supprimer les branches qui ne servent plus à rien ?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3. Notions avancées
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            3. Notions avancées
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3.%20Notions%20avanc%C3%A9es/branching-strategy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Branching strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3.%20Notions%20avanc%C3%A9es/creer-un-template-d-issue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les issue sur github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3.%20Notions%20avanc%C3%A9es/hooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les Hooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3.%20Notions%20avanc%C3%A9es/rebase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qu'est-ce que git rebase ?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    4. Conventions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            4. Conventions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4.%20Conventions/convention-de-commit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Convention de commit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4.%20Conventions/convention-de-nommage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Convention de nommage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="demarrer-avec-git">Démarrer avec Git</h1>
+<h2 id="installation-dun-projet"><strong>Installation d’un projet</strong></h2>
+<p>Le département Informatique a pour projet de développer le nouveau site du BUT Informatique.</p>
+<p>Afin de mener à bien ce projet et de ne pas répéter les erreurs de développement des précédentes équipes, Emma et Eric, étudiant en BUT Informatique en charge du projet, vont créer un nouvel environnement de travail.</p>
+<p>Ils vont utiliser  <strong><a href="1.%20Introduction/github/">Github</a></strong> afin de pouvoir travailler à plusieurs sur un même projet et ainsi conserver une trace de tout les modifications ajoutées au futur nouveau site Web.</p>
+<h2 id="i-creation-du-repository-sur-github">I) Création du repository sur Github</h2>
+<p>Emma est chargée de créer l'environnement Github. Pour cela, voici comment elle va procéder :</p>
+<ol>
+<li>Création d’un <strong>repository</strong> (projet) distant sur Github nommé "Site-des-informatiques"</li>
+<li>Laisser le repository en public</li>
+<li>Laisser décoché le Readme (On en créera un plus tard si besoin)</li>
+<li>Cliquer sur "Create repository"</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Nous avons maintenant un repository sur Github. Github étant un <a href="2.%20Notions%20de%20base/modeleDecentralise/">modèle décentralisé</a>, nous avons besoin de créer un environnement de travail sur notre machine en local.</p>
+</div>
+<h2 id="ii-creation-du-repository-en-local">II) Création du repository en local</h2>
+<p>Maintenant qu'Emma à créé le projet sur Github, elle doit maintenant créer le dossier qui acceuillera le projet sur sa machine, en local.</p>
+<ol>
+<li>Créer un dossier sur votre pc</li>
+<li>L’ouvrir via un environnement de développement intégré (IDE), ici nous utiliserons Visual Studio Code :
+    <a href="https://code.visualstudio.com/download">Installer VS Code</a></li>
+<li>Ouvrir un Terminal (menu en haut de page : Terminal -&gt; New Terminal)</li>
+<li>Réaliser les commandes suivantes dans ce terminal pour mettre en lien votre dossier local avec votre repository Github :<ul>
+<li><code>git init</code></li>
+<li><code>git remote add origin https://Github.com/User/Site-des-informatiques.git</code></li>
+</ul>
+</li>
+</ol>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>Emma a un problème en local, sa branche par défaut s'appelle <strong>master</strong> tandis que dans le repository distant elle s'appelle <strong>main</strong>.
+Pour régler ce problème, Emma a la super idée d’utiliser la commande suivante :</p>
+<ul>
+<li><code>git branch -M main</code>  (renomme la branche <strong>master</strong> dans laquelle Emma se trouve en <strong>main</strong>)</li>
+</ul>
+<p>Emma peut désormais communiquer proprement avec son repository sur Github !</p>
+</div>
+<p>Pour réaliser le site, Eric et Emma ont décidé d'utiliser un <strong>framework</strong> back-end basé sur <strong><a href="https://nodejs.org">Node.js</a></strong> du nom de <strong><a href="https://nextjs.org">Next.Js</a></strong>.</p>
+<p>Ils installent le projet via Next.Js sur l'ordinateur d'Emma, ce qui amène à la construction automatique d'un site basique avec l'ajout de nombreux fichiers (merci Next.Js).</p>
+<p>Emma part en pause café et Eric a la "bonne idée" de <strong>supprimer</strong> certains fichiers du projet local d'Emma, dont le fichier "<strong>.gitignore</strong>".</p>
+<p>Emma ne le remarque pas et souhaite sauvegarder une première fois son projet sur Github. Elle utilise la commande suivante :</p>
+<ul>
+<li><code>git add --all</code> (ajoute tous les fichiers dans le futurs <strong>commit</strong> afin de les amener sur le repo distant)</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Oh mon dieu ! Tous les modules on été ajouté dans le <code>commit</code> et ce n'est pas une bonne chose.</p>
+<p>Si Emma push , çela causera de très gros problèmes de place. Les modules npm (installés automatiquement lors de l'installation de Next.Js) sont très nombreux et lourd. </p>
+</div>
+<p>Emma se rend compte que quelque chose ne va pas, fait ses recherches et fini par trouver de la documentation sur le fonctionnement du fichier <a href="2.%20Notions%20de%20base/fichier-gitignore/">.gitignore</a>. Pour résoudre ce problème, il faut recréer le fichier .gitignore et le remplir comme ci-dessous :
+<div class="highlight"><pre><span></span><code><span class="c1"># dépendances</span>
+/node_modules
+/.pnp
+.pnp.js
+
+<span class="c1"># tester</span>
+/coverage
+
+<span class="c1"># next.js</span>
+/.next/
+/out/
+
+<span class="c1"># production</span>
+/build
+
+<span class="c1"># misc</span>
+.DS_Store
+*.pem
+
+<span class="c1"># debug</span>
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+<span class="c1"># Fichiers .env locaux</span>
+.env*.local
+
+<span class="c1"># vercel</span>
+.vercel
+
+<span class="c1"># typescript</span>
+*.tsbuildinfo
+next-env.d.ts
+</code></pre></div></p>
+<p>Ce fichier permet de ne pas ajouter automatiquement des fichiers / dossiers que l'on ne voudrait pas lors de la commande <code>git add</code> (réalisez la commande <code>git add -h</code> pour afficher les différentes options de cette commande).</p>
+<p>Elle réalise ensuite la commande <code>git status</code> pour vérifier si les modules sont toujours dans la <strong>Staging Area</strong>. La Staging Area est un endroit où se trouvent les fichiers qui vont être commit.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Les modules sont toujours prêt à être commit puisqu'ils sont toujours dans le Staging Area.</p>
+<p>Pour résoudre ce propblème, elle doit réaliser la commande <code>git restore --staged .</code> afin enlever les fichiers nodes-modules du Staging Area.</p>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>Vu qu'Emma n'a pas encore 'commit', le pointeur HEAD (référence au dernier commit réalisé dans la branche courante) n'a pas été créé, ce qui crée une erreur : </p>
+<div class="highlight"><pre><span></span><code>fatal: Could not resolve HEAD
+</code></pre></div>
+</div>
+<p>Emma a le bon réflexe. Elle va voir <a href="https://docs.gitlab.com/ee/topics/git/unstage.html">la documentation de git</a> pour supprimer un fichier du stage, puis exécute la commande <code>git rm --cached ./node_modules</code>.</p>
+<p>Comme <code>node_modules</code> est un dossier, l'erreur <code>fatal: Not removing './node_modules' recursively without -r</code> est reçue. Elle ajoute donc l'argument <code>-r</code></p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p><code>git rm -r --cached ./node_modules</code>, tout va bien ! Les node_modules ne sont plus dans le stage.</p>
+</div>
+</div>
+<p>Désormais, Emma n'a plus de problème avec le <code>.gitignore</code> Emma peut donc essayer d'envoyer son travail sur Github à l'aide des commandes suivantes:</p>
+<ul>
+<li><code>git add --all</code></li>
+<li><code>git commit -m "premier commit"</code></li>
+<li><code>git push</code></li>
+</ul>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>Une erreur apparaît dans le terminal :</p>
+<div class="highlight"><pre><span></span><code>fatal:<span class="w"> </span>The<span class="w"> </span>current<span class="w"> </span>branch<span class="w"> </span>main<span class="w"> </span>has<span class="w"> </span>no<span class="w"> </span>upstream<span class="w"> </span>branch.
+
+To<span class="w"> </span>push<span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>branch<span class="w"> </span>and<span class="w"> </span><span class="nb">set</span><span class="w"> </span>the<span class="w"> </span>remote<span class="w"> </span>as<span class="w"> </span>upstream,<span class="w"> </span>use<span class="w">    </span>
+git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>main<span class="w">    </span>
+
+To<span class="w"> </span>have<span class="w"> </span>this<span class="w"> </span>happen<span class="w"> </span>automatically<span class="w"> </span><span class="k">for</span><span class="w"> </span>branches<span class="w"> </span>without<span class="w"> </span>a<span class="w"> </span>tracking
+upstream,<span class="w"> </span>see<span class="w"> </span><span class="s1">&#39;push.autoSetupRemote&#39;</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s1">&#39;git help config&#39;</span>.
+</code></pre></div>
+</div>
+<p>Comme indiqué dans le message d'erreur un simple <strong>push</strong> pour un premier commit d'une branche ne suffit pas, il faut donc utiliser:</p>
+<pre><code>`git push --set-upstream origin main`
+</code></pre>
+<p>Cela va permettre de créer la branche <code>main</code> sur le dépot distant puis faire un <code>git push</code> dessus.</p>
+<h2 id="iii-arrive-dun-tier-sur-le-projet">III) Arrivé d'un tier sur le projet</h2>
+<p>Eric veut dorénavant rejoindre le projet sans devoir aller sur le poste d'Emma.</p>
+<h3 id="1-clone-du-repositoryabrrepo-distant">1. Clone du repository(.abr:repo) distant</h3>
+<p>Pour se faire Eric doit cloner le repo d'Emma depuis Github.</p>
+<p><code>git clone lien-ssh-du-repo</code> : voir la documentation sur <a href="2.%20Notions%20de%20base/SSH/">SSH</a></p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Cela permettra à Eric de travailler depuis son poste <strong>en local</strong> pour ajouter ses modifications et ensuite les <strong><a href="2.%20Notions%20de%20base/listingcommand/#git-commit">commit</a></strong></p>
+</div>
+<p>Ensuite, il doit créer une branche pour éviter de futurs conflits, pour plus d'informations : <a href="2.%20Notions%20de%20base/Gestion_Creation_Branche/">Gestion des branches</a></p>
+<h3 id="2-creation-de-sa-branche">2. Création de sa branche</h3>
+<p>Eric veut maintenant créer un formulaire, il va pour cela, créer une nouvelle branche nommée <code>feature-form</code>.</p>
+<p>Pour se déplacer sur sa branche, il utilise la commande : <code>git checkout feature-form</code></p>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>Une erreur apparaît dans le terminal :</p>
+<div class="highlight"><pre><span></span><code>error:<span class="w"> </span>pathspec<span class="w"> </span><span class="s1">&#39;feature-form&#39;</span><span class="w"> </span>did<span class="w"> </span>not<span class="w"> </span>match<span class="w"> </span>any<span class="w"> </span>file<span class="o">(</span>s<span class="o">)</span><span class="w"> </span>known<span class="w"> </span>to<span class="w"> </span>git
+</code></pre></div>
+</div>
+<p>Ce message nous dit que git n'a pas pu trouver de branche nommé <code>feature-form</code> dans le dépôt Git.</p>
+<p>Pour résoudre ce problème Eric ajoute l'argument <code>-b</code> avant le nom de la branche : <code>git checkout -b feature-form</code></p>
+<p>Cela va permettre de créer la branche puis de s'y déplacer.</p>
+<p>Maintenant il veut vérifier qu'il ai bien une nouvelle branche <code>feature-form</code> qui a été ajouté et qu'il est bien sur cette branche, pour ce faire il utilise : <code>git branch</code></p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>main
+*<span class="w"> </span>feature-form
+</code></pre></div>
+<p>Il y a bien deux branches et l'asterisque est positionné sur <code>feature-form</code> montrant que c'est la branche active.</p>
+<h3 id="3-construction-du-formulaire">3. Construction du formulaire</h3>
+<p>Eric développe donc un formulaire. Il veut désormais push sa modification sur la branche <code>feature-form</code> distante.</p>
+<p>Pour ce faire Eric va exécuter les commandes suivantes:</p>
+<ul>
+<li>
+<p><code>git add --all</code></p>
+</li>
+<li>
+<p><code>git commit -m "feature : create the front of the form"</code></p>
+</li>
+<li>
+<p><code>git push</code></p>
+</li>
+</ul>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>Une erreur apparaît dans le terminal :</p>
+<div class="highlight"><pre><span></span><code>fatal:<span class="w"> </span>The<span class="w"> </span>current<span class="w"> </span>branch<span class="w"> </span>main<span class="w"> </span>has<span class="w"> </span>no<span class="w"> </span>upstream<span class="w"> </span>branch.
+
+To<span class="w"> </span>push<span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>branch<span class="w"> </span>and<span class="w"> </span><span class="nb">set</span><span class="w"> </span>the<span class="w"> </span>remote<span class="w"> </span>as<span class="w"> </span>upstream,<span class="w"> </span>use<span class="w">    </span>
+git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>feature-form<span class="w">    </span>
+
+To<span class="w"> </span>have<span class="w"> </span>this<span class="w"> </span>happen<span class="w"> </span>automatically<span class="w"> </span><span class="k">for</span><span class="w"> </span>branches<span class="w"> </span>without<span class="w"> </span>a<span class="w"> </span>tracking
+upstream,<span class="w"> </span>see<span class="w"> </span><span class="s1">&#39;push.autoSetupRemote&#39;</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s1">&#39;git help config&#39;</span>.
+</code></pre></div>
+</div>
+<p>Effectué la commande <code>git push --set-upstream origin feature-form</code> pour créer sur le dépot distant la branche <code>feature-form</code> et pousser les modifications sur celle ci. </p>
+<p>Entre temps Emma a créer sa propre branche basé sur <code>main</code> qui s'appelle <code>feature-form-api</code> (code de l'api pour le formulaire). Elle a push les modifications sur le dépôt distant.
+Eric pour effectuer des tests de son formulaire, veut récupérer le code de la branche d'Emma. Pour ce faire, il va exécuter la commande <code>git rebase feature-form-api</code> depuis sa propre branche. </p>
+<p>Eric test le bon fonctionnement du formulaire et effectue les modifications nécessaires, puis push sur sa branche distante.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Emma a réalisé qu'elle avais mis en clair le mot de passe de la <strong>BDD</strong> dans un des fichiers qui a été commit et poussé sur le dépôt distant.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<div class="highlight"><pre><span></span><code>// prisma/schema.prisma
+
+datasource db {
+    provider = &quot;postgresql&quot;
+    url = &quot;postgresql://johndoe:lemotdepasse@localhost:5432/mydb?schema=public&quot;
+}
+</code></pre></div>
+</div>
+<p>Voici un graphique représentant la situation actuelle :
+<pre class="mermaid"><code>%%{init: { 'logLevel': 'debug', 'theme': 'base', 'themeVariables': {
+              'gitInv3': '#B26EDF',
+              'tagLabelFontSize': '15px',
+              'git0': '#72BE49',
+              'git1': '#B26EDF',
+              'git2': '#1167BD',
+              'git3': '#B26EDF',
+              'git4': '#1167BD',
+              'git5': '#C62817',
+              'git6': '#ff00ff',
+              'git7': '#00ffff',
+              'gitBranchLabel0': '#ffffff',
+              'gitBranchLabel1': '#ffffff',
+              'gitBranchLabel2': '#ffffff',
+              'gitBranchLabel3': '#ffffff',
+              'gitBranchLabel4': '#ffffff',
+              'gitBranchLabel5': '#ffffff',
+              'gitBranchLabel6': '#ffffff',
+              'gitBranchLabel7': '#ffffff',
+              'gitBranchLabel8': '#ffffff',
+              'gitBranchLabel9': '#ffffff'
+       } } }%%
+gitGraph
+   commit id:" "
+   branch feature-form
+   checkout feature-form
+   commit id:"Create form"
+   checkout main
+   branch origin/api
+   checkout origin/api
+   commit id:"Create endpoint (fixed)" type:HIGHLIGHT tag:"fichier api modifié"</code></pre></p>
+<p>Puisqu'Emma à pousser des données susceptibles sur Github, il est nécessaire de réécrire l'historique git (local et distant) et de déplacer le mot de passe de la BDD dans le fichier <strong><code>.env</code></strong>. Pour ce faire, elle doit réaliser les commandes dans l'ordre suivant :</p>
+<p>Elle doit tout d'abord enlever le mot de passe du fichier <code>prisma/schema.prisma</code>, puis le placer dans le fichier <code>.env</code> puisque ce dernier est ignoré lors de l'envoie sur le repository distant.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p><div class="highlight"><pre><span></span><code>// Fichier prisma/schema.prisma
+
+datasource db {
+    provider = &quot;postgresql&quot;
+    url = env(&quot;DATABASE_URL&quot;)
+}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Fichier .env
+
+DATABASE_URL=&quot;postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public&quot;
+</code></pre></div></p>
+</div>
+<p>Emma va réaliser un nouveau commit de ses fichiers sans le mot de passe :</p>
+<ul>
+<li>
+<p><code>git add --all</code></p>
+</li>
+<li>
+<p><code>git commit -m 'delete sensitive data from schema.prsima file'</code></p>
+</li>
+<li>
+<p><code>git push</code></p>
+</li>
+</ul>
+<p>Emma va ensuite vérifier son historique avec <code>git log --oneline</code>.</p>
+<div class="highlight"><pre><span></span><code>169caa6<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>feature-api,<span class="w"> </span>origin/feature-api<span class="o">)</span><span class="w"> </span>delete<span class="w"> </span>sensitive<span class="w"> </span>data<span class="w"> </span>from<span class="w"> </span>schema.prsima<span class="w"> </span>file
+e6ded27<span class="w"> </span>Form<span class="w"> </span>API
+
+//<span class="w"> </span>Ici,<span class="w"> </span>le<span class="w"> </span>sha<span class="w"> </span>du<span class="w"> </span>commit<span class="w"> </span>qui<span class="w"> </span>contient<span class="w"> </span>le<span class="w"> </span>mot<span class="w"> </span>de<span class="w"> </span>passe<span class="w"> </span>est<span class="w"> </span><span class="s1">&#39;e6ded27&#39;</span>
+</code></pre></div>
+<p>Emma va vérifier le commit <code>e6ded27</code> avec <code>git show e6ded27</code>.</p>
+<p>Elle se rend compte que le mot de passe est toujours accessible dans le fichier <code>prisma/schema.prisma</code>.</p>
+<p>Il faut réécrire le commit en question en amendant celui-ci pour supprimer toutes les trâces du mot de passe.</p>
+<p>Pour ce faire, il faut d'abord <strong>reset</strong> sur le commit contenant le mot de passe :
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>reset<span class="w"> </span>HEAD~1
+
+Unstaged<span class="w"> </span>changes<span class="w"> </span>after<span class="w"> </span>reset:
+M<span class="w">       </span>schema.prisma
+</code></pre></div></p>
+<p>Ensuite, il faut <strong>amender</strong> un commit :
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>--all
+
+git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;Form API modified&#39;</span>
+/**
+<span class="o">[</span>feature-api<span class="w"> </span>5bbd227<span class="o">]</span><span class="w"> </span>Form<span class="w"> </span>API<span class="w"> </span>modified
+Date:<span class="w"> </span>Thu<span class="w"> </span>Jan<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">08</span>:53:36<span class="w"> </span><span class="m">2024</span><span class="w"> </span>+0100
+<span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">1</span><span class="w"> </span>insertion<span class="o">(</span>+<span class="o">)</span>,<span class="w"> </span><span class="m">1</span><span class="w"> </span>deletion<span class="o">(</span>-<span class="o">)</span>
+*/
+
+git<span class="w"> </span>push<span class="w"> </span>--force
+/**
+Enumerating<span class="w"> </span>objects:<span class="w"> </span><span class="m">5</span>,<span class="w"> </span><span class="k">done</span>.
+Counting<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">5</span>/5<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+Delta<span class="w"> </span>compression<span class="w"> </span>using<span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span><span class="m">8</span><span class="w"> </span>threads
+Compressing<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+Writing<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>,<span class="w"> </span><span class="m">297</span><span class="w"> </span>bytes<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">297</span>.00<span class="w"> </span>KiB/s,<span class="w"> </span><span class="k">done</span>.
+Total<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">2</span><span class="o">)</span>,<span class="w"> </span>reused<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>pack-reused<span class="w"> </span><span class="m">0</span>
+remote:<span class="w"> </span>Resolving<span class="w"> </span>deltas:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">2</span>/2<span class="o">)</span>,<span class="w"> </span>completed<span class="w"> </span>with<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nb">local</span><span class="w"> </span>objects.
+To<span class="w"> </span>https://github.com/Emma/Info-website.git
+<span class="w"> </span>+<span class="w"> </span>169caa6...5bbd227<span class="w"> </span>feature-api<span class="w"> </span>-&gt;<span class="w"> </span>feature-api<span class="w"> </span><span class="o">(</span>forced<span class="w"> </span>update<span class="o">)</span>
+*/
+</code></pre></div></p>
+<p>A ce moment, le commit contenant le mot de passe à bien dû être complètement supprimer de l'historique. Pour le vérifier :
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>log<span class="w"> </span>--oneline
+5bbd227<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>feature-api,<span class="w"> </span>origin/feature-api<span class="o">)</span><span class="w"> </span>Form<span class="w"> </span>API<span class="w"> </span>modified
+8c08eca<span class="w"> </span>feature:Create<span class="w"> </span>API<span class="w"> </span>feature
+e19ceb6<span class="w"> </span><span class="o">(</span>origin/main,<span class="w"> </span>origin/HEAD,<span class="w"> </span>main<span class="o">)</span><span class="w"> </span>first<span class="w"> </span>commit
+079a6f8<span class="w"> </span>First<span class="w"> </span>commit
+</code></pre></div></p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Il n'y a plus aucune trâce du commit <code>e6ded27</code> contenant le mot de passe.
+Il a bien été remplacé par le nouveau commit ne contenant pas le mot de passe.</p>
+</div>
+<!-- ### CAS DE PROBLÈMES COURANTS
+
+Branche qui change de nom et crée un conflit :
+Merge la branche qui pose problème sur la bonne branche qui respecte la bonne convention de nommage. Supprimer la branche problématique
+Puis commit et push
+
+Récupérer des fichiers accidentellement supprimés
+
+Supprimer une branche trop tôt
+
+Commit du code non terminés
+
+Conflits de merge
+
+Erreur Permission Denied (Publickey)
+
+On a pull une branche qui avait été rebase. => `git config pull.ff only       # avance rapide seulement` -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+        
+          
+          <a href="1.%20Introduction/Installation-et-fonctionnement-docker/" class="md-footer__link md-footer__link--next" aria-label="Next: Installation et fonctionnement docker">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Installation et fonctionnement docker
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["toc.integrate", "navigation.tabs", "navigation.footer", "navigation.tabs.sticky", "navigation.top", "content.code.copy"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>
